@@ -1,3 +1,3 @@
-<div class="flex flex-col min-h-screen bg-white text-neutral-900">
+<div class="flex flex-col min-h-screen bg-white text-neutral-900 overflow-x-hidden">
     <slot/>
 </div>
