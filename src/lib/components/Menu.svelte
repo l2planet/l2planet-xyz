@@ -1,0 +1,27 @@
+<!-- Menu screen will only be displayed on mobile screens --> 
+<div class="animated md:hidden fixed left-0 top-16 flex flex-col p-7 gap-y-2 w-full h-[calc(100vh-4rem)] bg-white/10 backdrop-blur-lg">
+    <!-- Each anchor element represents a section of the website -->
+    <a href="/" class="flex items-center h-16 font-semibold text-3xl text-neutral-600">Home Page</a>
+    <a href="/" class="flex items-center h-16 font-semibold text-3xl text-neutral-600">Statistics</a>
+    <a href="/" class="flex items-center h-16 font-semibold text-3xl text-neutral-600">Our Story</a>
+    <a href="/" class="flex items-center h-16 font-semibold text-3xl text-neutral-600">Sponsor Us</a>
+</div>
+
+<style>
+    /* We define a class which includes a custom animation */
+    .animated {
+        animation: slide 150ms ease-out;
+        transform-origin: center right;
+    }
+    /* This is the custom animation */
+    @keyframes slide {
+        /* Each percentage represents a range of frames*/
+        0% {
+            /* Those persentages represent positions in x and y axis */
+            transform: translate(10%, 0%);
+        }
+        100% {
+            transform: translate(0%, 0%);
+        }
+    }
+</style>
