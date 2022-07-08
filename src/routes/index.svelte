@@ -1,4 +1,5 @@
 <script lang="ts">
+import Footer from "$lib/components/Footer.svelte";
 import Main from "$lib/components/Main.svelte";
 import Menu from "$lib/components/Menu.svelte";
 import Page from "$lib/components/Page.svelte";
@@ -14,6 +15,7 @@ let isMenuOpen: boolean = false
     <Menu isOpen={isMenuOpen}/>
     <!-- The contents will be right here -->
     <Main>
-        dsfdslkejwWWWWWWWWWWWWWWWWWWWWWWWWW
+        The content is here
     </Main>
+    <Footer/>
 </Page>
