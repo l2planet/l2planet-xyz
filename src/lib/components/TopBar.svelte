@@ -2,12 +2,12 @@
     import IconMenu from "./icons/IconMenu.svelte";
 </script>
 
-<header class="sticky top-0 z-30 flex items-center justify-between h-16 px-7 bg-white/50 backdrop-blur-xl">
+<header class="sticky top-0 z-30 flex items-center justify-between h-16 px-7 bg-white/50 backdrop-blur-xl select-none">
     <!-- This element is like the brand logo of the website -->
     <a class="font-extrabold text-2xl w-28" href="/">L2 Planet</a>
     <nav class="hidden h-full md:flex items-center">
         <a href="/blog" class="flex items-center h-full px-6 font-medium text-lg hover:text-violet-600 hover:scale-110  duration-200">Blog</a>
-        <a href="/L2 solutions" class="flex items-center h-full px-6 font-medium text-lg hover:text-violet-600 hover:scale-110 duration-200">L2 Solutions</a>
+        <a href="/l2 solutions" class="flex items-center h-full px-6 font-medium text-lg hover:text-violet-600 hover:scale-110 duration-200">L2 Solutions</a>
         <a href="/stats" class="flex items-center h-full px-6 font-medium text-lg hover:text-violet-600 hover:scale-110 duration-200">Stats</a>
     </nav>
     <!-- This button opens and closes the menu screen -->
