@@ -10,9 +10,11 @@
         <!-- Each anchor element represents a section of the website -->
         <nav class="flex flex-col min-h-80 gap-y-2 overflow-y-auto h-[calc(100vh-6rem)]">
             <a href="/" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50 active:text-violet-600/50 active:bg-neutral-900/10 duration-200 active:scale-95">Home Page</a>
-            <a href="/" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50 active:text-violet-600/50 active:bg-neutral-900/10 duration-200 active:scale-95">Statistics</a>
-            <a href="/" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50 active:text-violet-600/50 active:bg-neutral-900/10 duration-200 active:scale-95">Our Story</a>
-            <a href="/" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50 active:text-violet-600/50 active:bg-neutral-900/10 duration-200 active:scale-95">Sponsor Us</a>
+            <a href="/solutions" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50 active:text-violet-600/50 active:bg-neutral-900/10 duration-200 active:scale-95">Solutions</a>
+            <a href="/blog" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50 active:text-violet-600/50 active:bg-neutral-900/10 duration-200 active:scale-95">Blog</a>
+            <a href="/stats" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50 active:text-violet-600/50 active:bg-neutral-900/10 duration-200 active:scale-95">Stats</a>
+            <a href="/story" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50 active:text-violet-600/50 active:bg-neutral-900/10 duration-200 active:scale-95">Our Story</a>
+            <a href="/sponsor" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50 active:text-violet-600/50 active:bg-neutral-900/10 duration-200 active:scale-95">Sponsor Us</a>
         </nav>
     </div>
 {/if}

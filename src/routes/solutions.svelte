@@ -14,22 +14,13 @@ import ParagraphPaths from "$lib/components/Paths/ParagraphPaths.svelte";
 let isMenuOpen: boolean = false
 </script>
 
-<!-- Index Page starts here -->
+<!-- Solutions Page starts here -->
 <Page>
     <TopBar on:click={() => isMenuOpen = !isMenuOpen}/> <!-- If menu button is clicked, isMenuOpen value will be changed -->
     <Menu isOpen={isMenuOpen}/>
     <!-- The contents will be right here -->
     <Main>
-        <ArticlePaths>
-            <HeadingPaths/>
-            <ParagraphPaths/>
-            <GridPaths>
-                <CardPaths href="/solutions">L2 Solutions</CardPaths>
-                <CardPaths href="/blog">L2 Blog</CardPaths>
-                <CardPaths href="/stats">L2 Stats</CardPaths>
-                <CardPaths href="/">L2 Stuff</CardPaths>
-            </GridPaths>
-        </ArticlePaths>
+        Solutions...
     </Main>
     <Footer/>
 </Page>
