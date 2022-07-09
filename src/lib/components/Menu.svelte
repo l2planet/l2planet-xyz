@@ -10,7 +10,7 @@
         <!-- Each anchor element represents a section of the website -->
         <nav class="flex flex-col min-h-80 gap-y-2 overflow-y-auto h-[calc(100vh-6rem)]">
             <a href="/" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50">Home Page</a>
-            <a href="/solutions" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50">Solutions</a>
+            <a href="/l2 solutions" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50">L2 Solutions</a>
             <a href="/blog" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50">Blog</a>
             <a href="/stats" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50">Stats</a>
             <a href="/story" class="flex items-center p-3 rounded-2xl h-16 font-semibold text-3xl text-neutral-900/50">Our Story</a>

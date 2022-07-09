@@ -20,7 +20,7 @@ let isMenuOpen: boolean = false
     <Menu isOpen={isMenuOpen}/>
     <!-- The contents will be right here -->
     <Main>
-        Solutions...
+        L2 Solutions...
     </Main>
     <Footer/>
 </Page>

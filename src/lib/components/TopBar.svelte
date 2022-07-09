@@ -7,7 +7,7 @@
     <a class="font-extrabold text-2xl w-28" href="/">L2 Planet</a>
     <nav class="hidden h-full md:flex items-center">
         <a href="/blog" class="flex items-center h-full px-6 font-medium text-lg hover:text-violet-600 hover:scale-110  duration-200">Blog</a>
-        <a href="/solutions" class="flex items-center h-full px-6 font-medium text-lg hover:text-violet-600 hover:scale-110 duration-200">Solutions</a>
+        <a href="/L2 solutions" class="flex items-center h-full px-6 font-medium text-lg hover:text-violet-600 hover:scale-110 duration-200">L2 Solutions</a>
         <a href="/stats" class="flex items-center h-full px-6 font-medium text-lg hover:text-violet-600 hover:scale-110 duration-200">Stats</a>
     </nav>
     <!-- This button opens and closes the menu screen -->
