@@ -22,7 +22,7 @@
 <style>
     /* We define a class which includes a custom animation */
     .animated {
-        animation: slide 200ms ease-in-out;
+        animation: slide 100ms;
         transform-origin: center right;
     }
     /* This is the custom animation */
