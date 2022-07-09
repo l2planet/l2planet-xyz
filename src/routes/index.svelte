@@ -4,6 +4,11 @@ import Main from "$lib/components/Main.svelte";
 import Menu from "$lib/components/Menu.svelte";
 import Page from "$lib/components/Page.svelte";
 import TopBar from "$lib/components/TopBar.svelte";
+import ArticlePaths from "$lib/components/Paths/ArticlePaths.svelte";
+import HeadingPaths from "$lib/components/Paths/HeadingPaths.svelte";
+import GridPaths from "$lib/components/Paths/GridPaths.svelte";
+import CardPaths from "$lib/components/Paths/CardPaths.svelte";
+import ParagraphPaths from "$lib/components/Paths/ParagraphPaths.svelte";
 
 // isMenuOpen handles how menu screen is displayed
 let isMenuOpen: boolean = false
@@ -15,7 +20,16 @@ let isMenuOpen: boolean = false
     <Menu isOpen={isMenuOpen}/>
     <!-- The contents will be right here -->
     <Main>
-        The content is here
+        <ArticlePaths>
+            <HeadingPaths/>
+            <ParagraphPaths/>
+            <GridPaths>
+                <CardPaths href="/">L2 Solutions</CardPaths>
+                <CardPaths href="/">L2 Blog</CardPaths>
+                <CardPaths href="/">L2 Statistics</CardPaths>
+                <CardPaths href="/">L2 Stuff</CardPaths>
+            </GridPaths>
+        </ArticlePaths>
     </Main>
     <Footer/>
 </Page>
