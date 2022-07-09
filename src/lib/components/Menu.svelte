@@ -20,7 +20,7 @@
 <style>
     /* We define a class which includes a custom animation */
     .animated {
-        animation: slide 150ms ease-out;
+        animation: slide 200ms ease-in-out;
         transform-origin: center right;
     }
     /* This is the custom animation */
@@ -28,7 +28,7 @@
         /* Each percentage represents a range of frames*/
         0% {
             /* Those persentages represent positions in x and y axis */
-            transform: translate(10%, 0%);
+            transform: translate(100%, 0%);
         }
         100% {
             transform: translate(0%, 0%);
