@@ -12,3 +12,8 @@ button,
 a {
     -webkit-tap-highlight-color: transparent;
 }
+
+::selection {
+    color: white;
+    background-color: rgb(124, 58, 237);
+}
