@@ -4,6 +4,6 @@
     export let href: string
 </script>
 <!-- Card component -->
-<a href={href} class="flex items-center justify-center rounded-2xl font-bold text-xl sm:text-2xl md:text-xl lg:text-2xl bg-cyan-400/50 hover:rotate-6 active:-rotate-6 duration-200">
+<a href={href} class="flex items-center justify-center rounded-2xl font-bold text-xl sm:text-2xl md:text-xl lg:text-2xl bg-cyan-400/50 md:hover:rotate-6 active:-rotate-6 md:active:-rotate-6 duration-200">
     <slot/>
 </a>
