@@ -1,0 +1,19 @@
+<script lang="ts">
+    import { applyTheme } from '$lib/utils/theme'
+    import { fly } from 'svelte/transition'
+</script>
+
+<div on:click transition:fly={{duration: 200}} class="hidden fixed top-[4.5rem] right-6 z-30 md:flex flex-col rounded-xl p-3 gap-y-2 text-center font-semibold bg-[#ced2e0]/60 text-neutral-900 dark:bg-gri-600/60 dark:text-white animated-theme backdrop-blur-xl">
+    <button on:click={() => applyTheme('dark')} class="h-8 px-4 rounded-xl hover:scale-105 hover:bg-black/10 dark:hover:bg-white/10 duration-200">Dark</button>
+    <button on:click={() => applyTheme('light')} class="h-8 px-4 rounded-xl hover:scale-105 hover:bg-black/10 dark:hover:bg-white/10 duration-200">Light</button>
+    <button on:click={() => applyTheme('system')} class="h-8 px-4 rounded-xl hover:scale-105 hover:bg-black/10 dark:hover:bg-white/10 duration-200">System</button>
+</div>
+<div on:click class="hidden fixed md:flex top-0 left-0 z-20 w-full h-screen"/>
+
+
+<style>
+    .animated-theme {
+        transition: all 1000ms ease-in-out;
+        transform-origin: top center;
+    }
+</style>
