@@ -38,5 +38,5 @@ import ThemeDropdown from "./ThemeDropdown.svelte";
 {/if}
 
 {#if isThemeOpen }
-    <ThemeDropdown on:click={() => isThemeOpen = !isThemeOpen}/>
+    <ThemeDropdown on:click={() => {isMenuOpen = !isMenuOpen; toggleScroll()}}/>
 {/if}
