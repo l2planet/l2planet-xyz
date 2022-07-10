@@ -15,7 +15,7 @@ import IconTheme from '../icons/IconTheme.svelte';
         <a href="/story" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">Our Story</a>
         <a href="/sponsor" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">Sponsor Us</a>
     </nav>
-    <div on:click class="flex gap-x-5 min-h-14">
+    <div on:click class="flex w-fit gap-x-5 min-h-14">
         <button on:click={() => applyTheme('dark')} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">Dark</button>
         <button on:click={() => applyTheme('light')} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">Light</button>
         <button on:click={() => applyTheme('system')} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">System</button>
