@@ -34,7 +34,7 @@ import ThemeDropdown from "./ThemeDropdown.svelte";
 </header>
 
 {#if isMenuOpen}
-    <Menu/>
+    <Menu on:click={() => isMenuOpen = !isMenuOpen}/>
 {/if}
 
 {#if isThemeOpen }
