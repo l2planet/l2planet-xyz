@@ -1,10 +1,8 @@
 <script lang="ts">
-import { applyTheme } from "$lib/utils/theme";
-
     import IconMenu from "../icons/IconMenu.svelte";
     import IconTheme from "../icons/IconTheme.svelte";
-import Menu from "./Menu.svelte";
-import ThemeDropdown from "./ThemeDropdown.svelte";
+    import Menu from "./Menu.svelte";
+    import ThemeDropdown from "./ThemeDropdown.svelte";
 
     let isMenuOpen: boolean = false
     let isThemeOpen: boolean = false
@@ -33,10 +31,10 @@ import ThemeDropdown from "./ThemeDropdown.svelte";
     </div>
 </header>
 
-{#if isMenuOpen}
-    <Menu on:click={() => isMenuOpen = !isMenuOpen}/>
+{#if isMenuOpen }
+    <Menu on:click={() => {isMenuOpen = !isMenuOpen; toggleScroll()}}/>
 {/if}
 
 {#if isThemeOpen }
-    <ThemeDropdown on:click={() => {isMenuOpen = !isMenuOpen; toggleScroll()}}/>
+    <ThemeDropdown on:click={() => isThemeOpen = !isThemeOpen}/>
 {/if}
