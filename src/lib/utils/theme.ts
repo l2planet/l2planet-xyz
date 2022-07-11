@@ -14,7 +14,7 @@ export const theme = {
             case 'light':
                 this.setLight()
                 break
-                
+
             case 'system':
                 this.setSystem()
                 break
@@ -23,9 +23,6 @@ export const theme = {
     },
 
     setDark() {
-        //
-        if(localStorage.getItem('theme') == 'dark') return
-
         document.body.classList.add('dark')
         localStorage.setItem('theme', 'dark')
         window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', themeListener)
@@ -40,8 +37,6 @@ export const theme = {
     },
 
     setSystem() {
-        if(localStorage.getItem('theme') == 'system') return
-        
         if(window.matchMedia('(prefers-color-scheme: dark)')) document.body.classList.add('dark')
         localStorage.setItem('theme', 'system')
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', themeListener)
