@@ -9,11 +9,3 @@
     <button on:click={() => applyTheme('system')} class="h-8 px-4 rounded-xl hover:scale-105 hover:bg-black/10 dark:hover:bg-white/10 duration-200">System</button>
 </div>
 <div on:click class="hidden fixed md:flex top-0 left-0 z-20 w-full h-screen"/>
-
-
-<style>
-    .animated-theme {
-        transition: all 1000ms ease-in-out;
-        transform-origin: top center;
-    }
-</style>
