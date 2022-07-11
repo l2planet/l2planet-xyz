@@ -1,5 +1,5 @@
 <script lang="ts">
-import { applyTheme } from '$lib/utils/theme';
+import { theme } from '$lib/utils/theme';
 
     import { slide } from 'svelte/transition'
 import IconTheme from '../icons/IconTheme.svelte';
@@ -16,8 +16,8 @@ import IconTheme from '../icons/IconTheme.svelte';
         <a href="/sponsor" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">Sponsor Us</a>
     </nav>
     <div on:click class="flex w-fit gap-x-5 min-h-14">
-        <button on:click={() => applyTheme('dark')} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">Dark</button>
-        <button on:click={() => applyTheme('light')} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">Light</button>
-        <button on:click={() => applyTheme('system')} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">System</button>
+        <button on:click={theme.setDark} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">Dark</button>
+        <button on:click={theme.setLight} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">Light</button>
+        <button on:click={theme.setSystem} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">System</button>
     </div>
 </div>
