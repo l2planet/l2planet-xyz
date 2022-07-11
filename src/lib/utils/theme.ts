@@ -1,5 +1,6 @@
 export const theme = {
-    init() {
+    
+    init() { /* Initializes theme */
         const theme = localStorage.getItem('theme') as 'dark' | 'light' | 'system'
         if(!theme) {
             localStorage.setItem('theme', 'system')
@@ -22,13 +23,13 @@ export const theme = {
         }
     },
 
-    setDark() {
+    setDark() /* Sets theme dark */ {
         document.body.classList.add('dark')
         localStorage.setItem('theme', 'dark')
         window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', themeListener)
     },
 
-    setLight() {
+    setLight() /* Sets theme light */ {
         if(localStorage.getItem('theme') == 'light') return
 
         document.body.classList.remove('dark')
@@ -36,13 +37,14 @@ export const theme = {
         window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', themeListener)
     },
 
-    setSystem() {
+    setSystem() /* Sets theme system */ {
         if(window.matchMedia('(prefers-color-scheme: dark)')) document.body.classList.add('dark')
         localStorage.setItem('theme', 'system')
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', themeListener)
     }
 }
 
+// Event listener to listen changes of `prefers-color-scheme` Media Query
 function themeListener(this: MediaQueryList) {
     this.matches ? document.body.classList.add('dark') : document.body.classList.remove('dark')
 }
