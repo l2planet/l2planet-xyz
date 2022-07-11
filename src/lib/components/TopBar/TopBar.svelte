@@ -3,6 +3,7 @@
     import IconTheme from "../icons/IconTheme.svelte";
     import Menu from "./Menu.svelte";
     import ThemeDropdown from "./ThemeDropdown.svelte";
+    import favicon from "$lib/assets/logo.png"
 
     let isMenuOpen: boolean = false
     let isThemeOpen: boolean = false
@@ -12,7 +13,10 @@
 
 <header class="sticky top-0 z-30 flex items-center justify-between h-16 pl-7 pr-5  text-neutral-900 bg-white/60 dark:text-white dark:bg-gri-800/60 backdrop-blur-xl select-none">
     <!-- Brand logo of the website -->
-    <a class="font-extrabold text-2xl w-28" href="/">L2 Planet</a>
+    <a class="flex items-center justify-between font-extrabold text-2xl w-[9.5rem]" href="/">
+        <img src={favicon} alt="logo" class="h-8 w-8"/>
+        L2 Planet
+    </a>
     <!-- Navbar that contains anchor elements -->
     <nav class="hidden h-full md:flex items-center">
         <a href="/blog" class="flex items-center h-full px-6 font-medium text-lg text-neutral-900/60 dark:text-white/60 hover:text-fuchsia-600/70 dark:hover:text-fuchsia-400/70 duration-200">Blog</a>
@@ -24,7 +28,7 @@
         <IconMenu/> <p hidden>menu</p>
     </button>
     <!-- This button opens and closes the `ThemeDropdown` component -->
-    <div class="hidden md:flex justify-end w-28">
+    <div class="hidden md:flex justify-end w-[9.5rem]">
         <button on:click={() => isThemeOpen = !isThemeOpen} class="h-12 p-2 rounded-full hover:bg-black/10 active:bg-black/20  dark:hover:bg-white/10 dark:active:bg-white/20 duration-200 fill-neutral-900 dark:fill-white active:fill-neutral-900 dark:active:fill-white hover:scale-[1.075] active:scale-90">
             <IconTheme/>
         </button>
