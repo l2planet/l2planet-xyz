@@ -5,7 +5,7 @@
     export let name: string
 </script>
 <!-- Card component -->
-<a href={href} class="flex flex-col items-center justify-center gap-y-1 aspect-square rounded-2xl font-bold text-[2.5vw] lg:text-[1.375vw] bg-fuchsia-500/70 text-white shadow-lg md:hover:rotate-6 md:active:-rotate-6 duration-300">
+<a href={href} class="flex flex-col items-center justify-center gap-y-1 aspect-square rounded-2xl font-bold text-[2.5vw] lg:text-[1.375vw] bg-fuchsia-400/70 dark:bg-fuchsia-600/70 text-neutral-900 dark:text-white shadow-lg md:hover:rotate-6 md:active:-rotate-6 duration-300">
     <!-- Image comes here -->
     <div class="h-1/2">
         <slot/>
