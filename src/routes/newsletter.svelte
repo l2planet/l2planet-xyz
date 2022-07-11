@@ -6,12 +6,12 @@ import TopBar from "$lib/components/TopBar/TopBar.svelte";
 
 </script>
 
-<!-- Blog Page starts here -->
+<!-- Newsletter Page starts here -->
 <Page>
     <TopBar/>
     <!-- The contents will be right here -->
     <Main>
-        Blog...
+        Newsletter...
     </Main>
     <Footer/>
 </Page>

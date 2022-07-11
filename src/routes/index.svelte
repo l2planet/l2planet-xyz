@@ -20,10 +20,10 @@ import ParagraphPaths from "$lib/components/Paths/ParagraphPaths.svelte";
             <HeadingPaths/>
             <ParagraphPaths/>
             <GridPaths>
-                <CardPaths href="/l2 solutions">L2 Solutions</CardPaths>
-                <CardPaths href="/blog">L2 Blog</CardPaths>
-                <CardPaths href="/stats">L2 Stats</CardPaths>
-                <CardPaths href="/">L2 Stuff</CardPaths>
+                <CardPaths href="/">Ethereum</CardPaths>
+                <CardPaths href="/blog">PolkaDot</CardPaths>
+                <CardPaths href="/stats">Near</CardPaths>
+                <CardPaths href="/">Mina</CardPaths>
             </GridPaths>
         </ArticlePaths>
     </Main>
