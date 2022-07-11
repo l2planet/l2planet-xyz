@@ -9,6 +9,13 @@ import GridPaths from "$lib/components/Paths/GridPaths.svelte";
 import CardPaths from "$lib/components/Paths/CardPaths.svelte";
 import ParagraphPaths from "$lib/components/Paths/ParagraphPaths.svelte";
 import IconEthereum from "$lib/components/icons/IconEthereum.svelte";
+import IconBitcoin from "$lib/components/icons/IconBitcoin.svelte";
+import IconCardano from "$lib/components/icons/IconCardano.svelte";
+import IconTezos from "$lib/components/icons/IconTezos.svelte";
+import IconMina from "$lib/components/icons/IconMina.svelte";
+import IconFantom from "$lib/components/icons/IconFantom.svelte";
+import IconSysCoin from "$lib/components/icons/IconSysCoin.svelte";
+import IconMoonBeam from "$lib/components/icons/IconMoonBeam.svelte";
 
 </script>
 
@@ -22,9 +29,13 @@ import IconEthereum from "$lib/components/icons/IconEthereum.svelte";
             <ParagraphPaths/>
             <GridPaths>
                 <CardPaths name="Etherum" href="/"> <IconEthereum/> </CardPaths>
-                <CardPaths name="Etherum" href="/" />
-                <CardPaths name="Etherum" href="/" />
-                <CardPaths name="Etherum" href="/" />
+                <CardPaths name="Bitcoin" href="/"> <IconBitcoin/> </CardPaths>
+                <CardPaths name="Cardano" href="/"> <IconCardano/> </CardPaths>
+                <CardPaths name="Tezos" href="/"> <IconTezos/> </CardPaths>
+                <CardPaths name="Mina" href="/"> <IconMina/> </CardPaths>
+                <CardPaths name="Fantom" href="/"> <IconFantom/> </CardPaths>
+                <CardPaths name="MoonBeam" href="/"> <IconMoonBeam/> </CardPaths>
+                <CardPaths name="SysCoin" href="/"> <IconSysCoin/> </CardPaths>
             </GridPaths>
         </ArticlePaths>
     </Main>
