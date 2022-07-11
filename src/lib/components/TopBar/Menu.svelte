@@ -9,10 +9,10 @@ import IconTheme from '../icons/IconTheme.svelte';
 <div transition:slide={{duration: 200}} class="md:hidden fixed left-0 top-16 flex flex-col p-4 gap-y-8 w-full min-h-fit h-[calc(100vh-4rem)] overflow-y-auto bg-white/60 dark:bg-gri-900/60 backdrop-blur-xl select-none">
     <!-- Each anchor element represents a section of the website -->
     <nav class="flex flex-col min-h-96 gap-y-2">
-        <a href="/l2 solutions" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">Home</a>
-        <a href="/stats" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">Newsletter</a>
-        <a href="/blog" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">Stats</a>
-        <a href="/story" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">About</a>
+        <a href="/" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">Home</a>
+        <a href="/newsletter" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">Newsletter</a>
+        <a href="/stats" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">Stats</a>
+        <a href="/about" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-neutral-500">About</a>
     </nav>
     <div on:click class="flex w-fit gap-x-5 min-h-14">
         <button on:click={theme.setDark} class="font-semibold text-xl h-12 px-4 rounded-xl bg-white/50 dark:bg-gri-900/50">Dark</button>
