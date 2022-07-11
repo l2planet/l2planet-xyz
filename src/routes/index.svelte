@@ -22,10 +22,11 @@ import ParagraphPaths from "$lib/components/Paths/ParagraphPaths.svelte";
             <GridPaths>
                 <CardPaths href="/">Ethereum</CardPaths>
                 <CardPaths href="/">Bitcoin</CardPaths>
-                <CardPaths href="/">Mina</CardPaths>
-                <CardPaths href="/">Tezos</CardPaths>
                 <CardPaths href="/">Cardano</CardPaths>
+                <CardPaths href="/">Tezos</CardPaths>
+                <CardPaths href="/">Mina</CardPaths>
                 <CardPaths href="/">Fantom</CardPaths>
+                <CardPaths href="/">MoonBeam</CardPaths>
                 <CardPaths href="/">Syscoin</CardPaths>
             </GridPaths>
         </ArticlePaths>
