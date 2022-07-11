@@ -8,6 +8,7 @@ import HeadingPaths from "$lib/components/Paths/HeadingPaths.svelte";
 import GridPaths from "$lib/components/Paths/GridPaths.svelte";
 import CardPaths from "$lib/components/Paths/CardPaths.svelte";
 import ParagraphPaths from "$lib/components/Paths/ParagraphPaths.svelte";
+import IconEthereum from "$lib/components/icons/IconEthereum.svelte";
 
 </script>
 
@@ -20,14 +21,10 @@ import ParagraphPaths from "$lib/components/Paths/ParagraphPaths.svelte";
             <HeadingPaths/>
             <ParagraphPaths/>
             <GridPaths>
-                <CardPaths href="/">Ethereum</CardPaths>
-                <CardPaths href="/">Bitcoin</CardPaths>
-                <CardPaths href="/">Cardano</CardPaths>
-                <CardPaths href="/">Tezos</CardPaths>
-                <CardPaths href="/">Mina</CardPaths>
-                <CardPaths href="/">Fantom</CardPaths>
-                <CardPaths href="/">MoonBeam</CardPaths>
-                <CardPaths href="/">Syscoin</CardPaths>
+                <CardPaths name="Etherum" href="/"> <IconEthereum/> </CardPaths>
+                <CardPaths name="Etherum" href="/" />
+                <CardPaths name="Etherum" href="/" />
+                <CardPaths name="Etherum" href="/" />
             </GridPaths>
         </ArticlePaths>
     </Main>
