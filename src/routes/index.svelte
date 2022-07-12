@@ -16,6 +16,7 @@ import IconMina from "$lib/components/icons/IconMina.svelte";
 import IconFantom from "$lib/components/icons/IconFantom.svelte";
 import IconSysCoin from "$lib/components/icons/IconSysCoin.svelte";
 import IconMoonBeam from "$lib/components/icons/IconMoonBeam.svelte";
+import H1 from "$lib/components/H1.svelte";
 
 </script>
 
@@ -25,7 +26,7 @@ import IconMoonBeam from "$lib/components/icons/IconMoonBeam.svelte";
     <!-- The contents will be right here -->
     <Main>
         <ArticleChains>
-            <HeadingChains/>
+            <H1>Pick a Path</H1>
             <ParagraphChains/>
             <GridChains>
                 <CardChains name="Ethereum" href="/ethereum"> <IconEthereum/> </CardChains>
