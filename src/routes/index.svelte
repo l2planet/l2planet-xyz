@@ -28,7 +28,7 @@ import IconMoonBeam from "$lib/components/icons/IconMoonBeam.svelte";
             <HeadingPaths/>
             <ParagraphPaths/>
             <GridPaths>
-                <CardPaths name="Etherum" href="/"> <IconEthereum/> </CardPaths>
+                <CardPaths name="Ethereum" href="/"> <IconEthereum/> </CardPaths>
                 <CardPaths name="Bitcoin" href="/"> <IconBitcoin/> </CardPaths>
                 <CardPaths name="Cardano" href="/"> <IconCardano/> </CardPaths>
                 <CardPaths name="Tezos" href="/"> <IconTezos/> </CardPaths>
