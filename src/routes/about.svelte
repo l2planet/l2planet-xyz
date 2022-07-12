@@ -19,11 +19,11 @@ import TopBar from "$lib/components/TopBar/TopBar.svelte";
     <Main>
         <WrapperAbout>
             <div class="flex flex-col text-center w-full max-w-6xl gap-y-20">
-                <div class="flex flex-col gap-y-4">
+                <div class="flex flex-col gap-y-3 sm:gap-y-4">
                     <HeadingAbout/>
                     <ParagraphAbout/>
                 </div>
-                <div class="flex flex-col gap-y-16">
+                <div class="flex flex-col gap-y-8 sm:gap-y-16">
                     <H2>What we do</H2>
                     <GridAbout>
                         <CardAbout title="Newsletter">People can easily track the state of L2s by reading</CardAbout>
