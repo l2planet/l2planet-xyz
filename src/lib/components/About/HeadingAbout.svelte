@@ -1,0 +1,1 @@
+<h2 class="font-semibold text-5xl md:text-6xl">About Us</h2>
