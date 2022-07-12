@@ -28,14 +28,14 @@ import IconMoonBeam from "$lib/components/icons/IconMoonBeam.svelte";
             <HeadingPaths/>
             <ParagraphPaths/>
             <GridPaths>
-                <CardPaths name="Ethereum" href="/"> <IconEthereum/> </CardPaths>
-                <CardPaths name="Bitcoin" href="/"> <IconBitcoin/> </CardPaths>
-                <CardPaths name="Cardano" href="/"> <IconCardano/> </CardPaths>
-                <CardPaths name="Tezos" href="/"> <IconTezos/> </CardPaths>
-                <CardPaths name="Mina" href="/"> <IconMina/> </CardPaths>
-                <CardPaths name="Fantom" href="/"> <IconFantom/> </CardPaths>
-                <CardPaths name="MoonBeam" href="/"> <IconMoonBeam/> </CardPaths>
-                <CardPaths name="SysCoin" href="/"> <IconSysCoin/> </CardPaths>
+                <CardPaths name="Ethereum" href="/ethereum"> <IconEthereum/> </CardPaths>
+                <CardPaths name="Bitcoin" href="/bitcoin"> <IconBitcoin/> </CardPaths>
+                <CardPaths name="Cardano" href="/cardano"> <IconCardano/> </CardPaths>
+                <CardPaths name="Tezos" href="/tezos"> <IconTezos/> </CardPaths>
+                <CardPaths name="Mina" href="/mina"> <IconMina/> </CardPaths>
+                <CardPaths name="Fantom" href="/fantom"> <IconFantom/> </CardPaths>
+                <CardPaths name="MoonBeam" href="/moonbeam"> <IconMoonBeam/> </CardPaths>
+                <CardPaths name="SysCoin" href="/syscoin"> <IconSysCoin/> </CardPaths>
             </GridPaths>
         </ArticlePaths>
     </Main>
