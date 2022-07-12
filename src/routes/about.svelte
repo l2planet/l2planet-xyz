@@ -23,7 +23,7 @@ import TopBar from "$lib/components/TopBar/TopBar.svelte";
                     <HeadingAbout/>
                     <ParagraphAbout/>
                 </div>
-                <div class="flex flex-col gap-y-8 sm:gap-y-16">
+                <div class="flex flex-col gap-y-8 sm:gap-y-12">
                     <H2>What we do</H2>
                     <GridAbout>
                         <CardAbout title="Newsletter">People can easily track the state of L2s by reading</CardAbout>
