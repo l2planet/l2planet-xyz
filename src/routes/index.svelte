@@ -3,11 +3,11 @@ import Footer from "$lib/components/Footer.svelte";
 import Main from "$lib/components/Main.svelte";
 import Page from "$lib/components/Page.svelte";
 import TopBar from "$lib/components/TopBar/TopBar.svelte";
-import ArticlePaths from "$lib/components/Paths/ArticlePaths.svelte";
-import HeadingPaths from "$lib/components/Paths/HeadingPaths.svelte";
-import GridPaths from "$lib/components/Paths/GridPaths.svelte";
-import CardPaths from "$lib/components/Paths/CardPaths.svelte";
-import ParagraphPaths from "$lib/components/Paths/ParagraphPaths.svelte";
+import ArticleChains from "$lib/components/Chains/ArticleChains.svelte";
+import HeadingChains from "$lib/components/Chains/HeadingChains.svelte";
+import GridChains from "$lib/components/Chains/GridChains.svelte";
+import CardChains from "$lib/components/Chains/CardChains.svelte";
+import ParagraphChains from "$lib/components/Chains/ParagraphChains.svelte";
 import IconEthereum from "$lib/components/icons/IconEthereum.svelte";
 import IconBitcoin from "$lib/components/icons/IconBitcoin.svelte";
 import IconCardano from "$lib/components/icons/IconCardano.svelte";
@@ -24,20 +24,20 @@ import IconMoonBeam from "$lib/components/icons/IconMoonBeam.svelte";
     <TopBar/> <!-- If menu button is clicked, isMenuOpen value will be changed -->
     <!-- The contents will be right here -->
     <Main>
-        <ArticlePaths>
-            <HeadingPaths/>
-            <ParagraphPaths/>
-            <GridPaths>
-                <CardPaths name="Ethereum" href="/ethereum"> <IconEthereum/> </CardPaths>
-                <CardPaths name="Bitcoin" href="/bitcoin"> <IconBitcoin/> </CardPaths>
-                <CardPaths name="Cardano" href="/cardano"> <IconCardano/> </CardPaths>
-                <CardPaths name="Tezos" href="/tezos"> <IconTezos/> </CardPaths>
-                <CardPaths name="Mina" href="/mina"> <IconMina/> </CardPaths>
-                <CardPaths name="Fantom" href="/fantom"> <IconFantom/> </CardPaths>
-                <CardPaths name="MoonBeam" href="/moonbeam"> <IconMoonBeam/> </CardPaths>
-                <CardPaths name="SysCoin" href="/syscoin"> <IconSysCoin/> </CardPaths>
-            </GridPaths>
-        </ArticlePaths>
+        <ArticleChains>
+            <HeadingChains/>
+            <ParagraphChains/>
+            <GridChains>
+                <CardChains name="Ethereum" href="/ethereum"> <IconEthereum/> </CardChains>
+                <CardChains name="Bitcoin" href="/bitcoin"> <IconBitcoin/> </CardChains>
+                <CardChains name="Cardano" href="/cardano"> <IconCardano/> </CardChains>
+                <CardChains name="Tezos" href="/tezos"> <IconTezos/> </CardChains>
+                <CardChains name="Mina" href="/mina"> <IconMina/> </CardChains>
+                <CardChains name="Fantom" href="/fantom"> <IconFantom/> </CardChains>
+                <CardChains name="MoonBeam" href="/moonbeam"> <IconMoonBeam/> </CardChains>
+                <CardChains name="SysCoin" href="/syscoin"> <IconSysCoin/> </CardChains>
+            </GridChains>
+        </ArticleChains>
     </Main>
     <Footer/>
 </Page>
