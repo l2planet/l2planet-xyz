@@ -4,7 +4,6 @@ import Main from "$lib/components/Main.svelte";
 import Page from "$lib/components/Page.svelte";
 import TopBar from "$lib/components/TopBar/TopBar.svelte";
 import ArticleChains from "$lib/components/Chains/ArticleChains.svelte";
-import HeadingChains from "$lib/components/Chains/HeadingChains.svelte";
 import GridChains from "$lib/components/Chains/GridChains.svelte";
 import CardChains from "$lib/components/Chains/CardChains.svelte";
 import ParagraphChains from "$lib/components/Chains/ParagraphChains.svelte";
