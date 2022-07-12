@@ -19,10 +19,10 @@
     </a>
     <!-- Navbar that contains anchor elements -->
     <nav class="hidden h-full md:flex items-center">
-        <a href="/" class="flex items-center h-full px-6 font-medium text-lg text-neutral-900/60 dark:text-white/60 hover:text-fuchsia-600/70 dark:hover:text-fuchsia-400/70 duration-200">Home</a>
-        <a href="/newsletter" class="flex items-center h-full px-6 font-medium text-lg text-neutral-900/60 dark:text-white/60 hover:text-fuchsia-600/70 dark:hover:text-fuchsia-400/70 duration-200">Newsletter</a>
-        <a href="/stats" class="flex items-center h-full px-6 font-medium text-lg text-neutral-900/60 dark:text-white/60 hover:text-fuchsia-600/70 dark:hover:text-fuchsia-400/70 duration-200">Stats</a>
-        <a href="/about" class="flex items-center h-full px-6 font-medium text-lg text-neutral-900/60 dark:text-white/60 hover:text-fuchsia-600/70 dark:hover:text-fuchsia-400/70 duration-200">About</a>
+        <a href="/" class="flex items-center h-full px-6 font-medium text-lg text-neutral-900/60 dark:text-white/60 hover:text-fuchsia-600/70 dark:hover:text-fuchsia-400/70 active:text-neutral-900 dark:active:text-white duration-200">Home</a>
+        <a href="/newsletter" class="flex items-center h-full px-6 font-medium text-lg text-neutral-900/60 dark:text-white/60 hover:text-fuchsia-600/70 dark:hover:text-fuchsia-400/70 active:text-neutral-900 dark:active:text-white duration-200">Newsletter</a>
+        <a href="/stats" class="flex items-center h-full px-6 font-medium text-lg text-neutral-900/60 dark:text-white/60 hover:text-fuchsia-600/70 dark:hover:text-fuchsia-400/70 active:text-neutral-900 dark:active:text-white duration-200">Stats</a>
+        <a href="/about" class="flex items-center h-full px-6 font-medium text-lg text-neutral-900/60 dark:text-white/60 hover:text-fuchsia-600/70 dark:hover:text-fuchsia-400/70 active:text-neutral-900 dark:active:text-white duration-200">About</a>
     </nav>
     <!-- This button opens and closes `Menu` component -->
     <button on:click={() => {isMenuOpen = !isMenuOpen; toggleScroll()}} class="h-12 md:hidden p-2 rounded-full active:bg-neutral-900/10 dark:active:bg-white/10 fill-gri-800 dark:fill-white active:scale-90 duration-200">
