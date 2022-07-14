@@ -12,7 +12,7 @@ import Section from "$lib/components/Section.svelte";
 <Section>
     <div class="flex flex-col gap-y-3 sm:gap-y-4">
         <H1>About Us</H1>
-        <ParagraphAbout/>
+        <ParagraphAbout>L2 Planet is a community-driven L2 newsletter project which is run by volunteers</ParagraphAbout>
     </div>
     <div class="flex flex-col gap-y-8 sm:gap-y-12">
         <H2>What we do</H2>
