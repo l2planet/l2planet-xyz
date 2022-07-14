@@ -1,10 +1,10 @@
 <script>
 import H1 from "$lib/components/H1.svelte";
 import H2 from "$lib/components/H2.svelte";
-import FlexFees from "$lib/components/Stats/FlexFees.svelte";
-import FlexTps from "$lib/components/Stats/FlexTps.svelte";
-import ItemFees from "$lib/components/Stats/ItemFees.svelte";
-import ItemTps from "$lib/components/Stats/ItemTps.svelte";
+import TableFees from "$lib/components/Stats/TableFees.svelte";
+import TableTps from "$lib/components/Stats/TableTps.svelte";
+import RowFees from "$lib/components/Stats/RowFees.svelte";
+import RowTps from "$lib/components/Stats/RowTps.svelte";
 
 </script>
 <!-- Stats Page starts here -->
@@ -13,23 +13,23 @@ import ItemTps from "$lib/components/Stats/ItemTps.svelte";
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="flex flex-col gap-y-3">
             <H2>Fees</H2>
-            <FlexFees>
-                <ItemFees name="Metis"/>
-                <ItemFees name="Metis"/>
-                <ItemFees name="Metis"/>
-                <ItemFees name="Metis"/> 
-                <ItemFees name="Metis"/> 
-            </FlexFees>
+            <TableFees>
+                <RowFees name="Metis"/>
+                <RowFees name="Metis"/>
+                <RowFees name="Metis"/>
+                <RowFees name="Metis"/> 
+                <RowFees name="Metis"/> 
+            </TableFees>
         </div>
         <div class="flex flex-col gap-y-3">
             <H2>TPS</H2>
-            <FlexTps>
-                <ItemTps name="Metis"/> 
-                <ItemTps name="Metis"/> 
-                <ItemTps name="Metis"/> 
-                <ItemTps name="Metis"/> 
-                <ItemTps name="Metis"/> 
-            </FlexTps>
+            <TableTps>
+                <RowTps name="Metis"/> 
+                <RowTps name="Metis"/> 
+                <RowTps name="Metis"/> 
+                <RowTps name="Metis"/> 
+                <RowTps name="Metis"/> 
+            </TableTps>
         </div>
     </div>
 </div>
