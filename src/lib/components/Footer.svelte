@@ -1,4 +1,4 @@
-<footer class="flex items-center justify-center px-8 py-16 bg-[#eeeeee] dark:bg-gri-900">
+<footer class="flex items-center justify-center w-full px-8 py-16 bg-[#eeeeee] dark:bg-gri-900">
     <div class="flex flex-col md:flex-row justify-between w-full max-w-5xl gap-y-16">
         <div class="flex flex-col gap-y-4">
             <h3 class="font-bold text-3xl">L2 Planet</h3>

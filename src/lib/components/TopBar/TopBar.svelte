@@ -11,7 +11,7 @@
     const toggleScroll =  () => isMenuOpen ? document.body.style.overflowY = 'hidden' : document.body.style.overflowY = 'auto'
 </script>
 
-<header class="sticky top-0 z-30 flex items-center justify-between h-16 pl-7 pr-5  text-neutral-900 bg-white/60 dark:text-white dark:bg-gri-800/60 backdrop-blur-xl select-none">
+<header class="sticky top-0 z-30 flex items-center justify-between w-full h-16 pl-7 pr-5  text-neutral-900 bg-white/60 dark:text-white dark:bg-gri-800/60 backdrop-blur-xl select-none">
     <!-- Brand logo of the website -->
     <a class="flex items-center justify-between font-extrabold text-[1.375rem] min-w-[9rem]" href="/">
         <img src={favicon} alt="logo" class="h-8 w-8"/>
