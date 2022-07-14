@@ -9,10 +9,9 @@ import RowTps from "$lib/components/Stats/RowTps.svelte";
 </script>
 <!-- Stats Page starts here -->
 <div class="flex flex-col gap-8">
-    <H1>Stats</H1>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="flex flex-col gap-y-3">
-            <H2>Fees</H2>
+            <H1>Fees</H1>
             <TableFees>
                 <RowFees name="Metis"/>
                 <RowFees name="Metis"/>
@@ -22,7 +21,7 @@ import RowTps from "$lib/components/Stats/RowTps.svelte";
             </TableFees>
         </div>
         <div class="flex flex-col gap-y-3">
-            <H2>TPS</H2>
+            <H1>TPS</H1>
             <TableTps>
                 <RowTps name="Metis"/> 
                 <RowTps name="Metis"/> 
