@@ -4,6 +4,7 @@ export const theme = {
         const theme = localStorage.getItem('theme') as 'dark' | 'light' | 'system'
         if(!theme) {
             localStorage.setItem('theme', 'system')
+            this.setSystem()
             return
         }
         else {
