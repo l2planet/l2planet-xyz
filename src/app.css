@@ -14,9 +14,9 @@ a {
 
 ::selection {
     color: white;
-    background-color: rgb(192 38 211);
+    background-color: rgb(14 165 233);
 }
 .dark ::selection {
     color: rgb(23 23 23);
-    background-color: rgb(232 121 249);
+    background-color: rgb(56, 189, 248);
 }

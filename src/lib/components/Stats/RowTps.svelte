@@ -2,7 +2,7 @@
     export let name: string
 </script>
 
-<tr class="grid grid-cols-3 items-center h-12 rounded-3xl px-6 gap-y-2 bg-fuchsia-400/30 cursor-pointer">
+<tr class="grid grid-cols-3 items-center h-11 rounded-3xl px-6 gap-y-2 shadow-md shadow-slate-900/10 dark:shadow-none bg-sky-400/50 dark:bg-sky-800/50">
     <td class="text-left">{name}</td>
     <td class="text-right">740 tps</td>
     <td class="text-right">127 tps</td>

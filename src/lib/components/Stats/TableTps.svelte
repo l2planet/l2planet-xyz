@@ -1,4 +1,4 @@
-<table class="flex flex-col rounded-3xl p-3 gap-y-3 bg-[#eaeaea] dark:bg-gri-900">
+<table class="flex flex-col rounded-3xl p-3 gap-y-3 shadow-lg shadow-slate-900/10 dark:shadow-none bg-slate-100 dark:bg-slate-800">
     <thead>
         <tr class="grid grid-cols-3 rounded-2xl px-6">
             <th class="text-left">Name</th>
