@@ -15,7 +15,7 @@ import TabSolutions from "$lib/components/Solutions/TabSolutions.svelte";
 </script>
 <!-- Ethereum Page starts here -->
 <div class="flex flex-col items-center gap-y-8">
-    <H1>Etherum</H1>
+    <H1>Ethereum</H1>
     <TabMenuSolutions>
         <TabSolutions on:click={() => onTabClick(0)} active={dib[0]}><p>ZK</p><span class="sm:hidden">&nbsp;</span><p>Rollup</p></TabSolutions>
         <TabSolutions on:click={() => onTabClick(1)} active={dib[1]}><p>Optimistic</p><span class="sm:hidden">&nbsp;</span><p>Rollup</p></TabSolutions>
