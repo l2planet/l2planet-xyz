@@ -3,14 +3,12 @@ import H1 from "$lib/components/H1.svelte";
 import H2 from "$lib/components/H2.svelte";
 import TabMenuSolutions from "$lib/components/Solutions/TabMenuSolutions.svelte";
 import TabSolutions from "$lib/components/Solutions/TabSolutions.svelte";
-    let dib: boolean[] = [true, false, false, false, false]
+    $: dib = [true, false, false, false, false]
     $: activeTab = 0
     const onTabClick = (id: number) => {
-        if(id == 0) {dib = [true, false, false, false,false]; activeTab = 0}
-        else if(id == 1) {dib = [false, true, false, false,false]; activeTab = 1}
-        else if(id == 2) {dib = [false, false, true, false,false]; activeTab = 2}
-        else if(id == 3) {dib = [false, false, false, true,false]; activeTab = 3}
-        else if(id == 4) {dib = [false, false, false, false,true]; activeTab = 4}
+        const ar = [false, false, false, false, false]
+        ar[id] = true
+        dib = ar
     }
 </script>
 <!-- Ethereum Page starts here -->
