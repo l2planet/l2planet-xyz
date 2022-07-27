@@ -21,3 +21,15 @@ body.dark {
 .dark ::selection {
     background-color: #0284c780;
 }
+
+.border-and-bg {
+    @apply
+    border-sky-400 dark:border-sky-700
+    bg-sky-500/20 hover:bg-sky-500/40 active:bg-sky-500/60
+    dark:bg-sky-600/20 dark:hover:bg-sky-600/40 dark:active:bg-sky-600/60
+    border duration-200;
+}
+.scaler {
+    @apply
+    hover:scale-105 active:scale-90;
+}
