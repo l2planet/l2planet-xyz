@@ -4,10 +4,12 @@
 
 body {
     font-family: 'Manrope', sans-serif;
+    color: #0f172a;
+    background-color: white;
 }
 body.dark {
     color: white;
-    background-color: rgb(15 23 42);
+    background-color: #0f172a;
 }
 
 * {
