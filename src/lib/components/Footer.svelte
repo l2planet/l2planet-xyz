@@ -28,9 +28,9 @@
             <div class="flex flex-col gap-y-3">
                 <h4 class="font-bold text-lg">DAO</h4>
                 <ul class="flex flex-col items-start gap-y-2 font-semibold text-[1rem] text-dark/70 dark:text-lite/70">
-                    <li class="hover:text-sky-600 dark:hover:text-sky-400 duration-100"><a href="/">Writers</a></li>
-                    <li class="hover:text-sky-600 dark:hover:text-sky-400 duration-100"><a href="/">Join Us</a></li>
-                    <li class="hover:text-sky-600 dark:hover:text-sky-400 duration-100"><a href="/">Donate</a></li>
+                    <li class="hover:text-sky-600 dark:hover:text-sky-400 duration-100"><a href="/dao/writers">Writers</a></li>
+                    <li class="hover:text-sky-600 dark:hover:text-sky-400 duration-100"><a href="/dao/joinus">Join Us</a></li>
+                    <li class="hover:text-sky-600 dark:hover:text-sky-400 duration-100"><a href="/dao/donate">Donate</a></li>
                 </ul>
             </div>
         </div>
