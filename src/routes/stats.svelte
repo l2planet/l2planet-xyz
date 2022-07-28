@@ -1,11 +1,11 @@
 <script>
-import H1 from "$lib/components/H1.svelte";
-import H2 from "$lib/components/H2.svelte";
+import H1 from "$lib/components/common/H1.svelte";
+import H2 from "$lib/components/common/H2.svelte";
 import TableFees from "$lib/components/Stats/TableFees.svelte";
 import TableTps from "$lib/components/Stats/TableTps.svelte";
 import RowFees from "$lib/components/Stats/RowFees.svelte";
 import RowTps from "$lib/components/Stats/RowTps.svelte";
-import Div from "$lib/components/Div.svelte";
+import Div from "$lib/components/common/Div.svelte";
 
 </script>
 <!-- Stats Page starts here -->

@@ -1,10 +1,10 @@
 <script lang="ts">
 import CardAbout from "$lib/components/About/CardAbout.svelte";
 import GridAbout from "$lib/components/About/GridAbout.svelte";
-import Div from "$lib/components/Div.svelte";
-import H1 from "$lib/components/H1.svelte";
-import H2 from "$lib/components/H2.svelte";
-import P1 from "$lib/components/P1.svelte";
+import Div from "$lib/components/common/Div.svelte";
+import H1 from "$lib/components/common/H1.svelte";
+import H2 from "$lib/components/common/H2.svelte";
+import P1 from "$lib/components/common/P1.svelte";
 
 </script>
 

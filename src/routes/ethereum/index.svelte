@@ -1,6 +1,6 @@
 <script lang="ts">
-import H1 from "$lib/components/H1.svelte";
-import H2 from "$lib/components/H2.svelte";
+import H1 from "$lib/components/common/H1.svelte";
+import H2 from "$lib/components/common/H2.svelte";
 import TabMenuSolutions from "$lib/components/Solutions/TabMenuSolutions.svelte";
 import TabSolutions from "$lib/components/Solutions/TabSolutions.svelte";
     $: dib = [true, false, false, false, false]

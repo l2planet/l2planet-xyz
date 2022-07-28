@@ -9,9 +9,9 @@ import IconMina from "$lib/components/icons/IconMina.svelte";
 import IconFantom from "$lib/components/icons/IconFantom.svelte";
 import IconSysCoin from "$lib/components/icons/IconSysCoin.svelte";
 import IconMoonBeam from "$lib/components/icons/IconMoonBeam.svelte";
-import H1 from "$lib/components/H1.svelte";
-import P1 from "$lib/components/P1.svelte";
-import Div from "$lib/components/Div.svelte";
+import H1 from "$lib/components/common/H1.svelte";
+import P1 from "$lib/components/common/P1.svelte";
+import Div from "$lib/components/common/Div.svelte";
 
 </script>
 

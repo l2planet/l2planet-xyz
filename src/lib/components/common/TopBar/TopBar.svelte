@@ -1,6 +1,6 @@
 <script lang="ts">
-    import IconMenu from "../icons/IconMenu.svelte";
-    import IconTheme from "../icons/IconTheme.svelte";
+    import IconMenu from "../../icons/IconMenu.svelte";
+    import IconTheme from "../../icons/IconTheme.svelte";
     import Menu from "./Menu.svelte";
     import ThemeDropdown from "./ThemeDropdown.svelte";
     import favicon from "$lib/assets/logo.png"

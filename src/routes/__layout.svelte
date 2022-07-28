@@ -2,10 +2,10 @@
     import { onMount } from 'svelte';
     import { theme } from '../lib/utils/theme'
     import '../app.css'
-    import Page from '$lib/components/Page.svelte';
-import TopBar from '$lib/components/TopBar/TopBar.svelte';
-import Main from '$lib/components/Main.svelte';
-import Footer from '$lib/components/Footer.svelte';
+    import Page from '$lib/components/common/Page.svelte';
+import TopBar from '$lib/components/common/TopBar/TopBar.svelte';
+import Main from '$lib/components/common/Main.svelte';
+import Footer from '$lib/components/common/Footer.svelte';
 
     onMount(() => {
         theme.init()
