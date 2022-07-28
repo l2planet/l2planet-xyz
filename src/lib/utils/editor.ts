@@ -53,7 +53,7 @@ export function calcFontSize(blockType: BlockType): string {
 
 export function calcFontWeight(blockType: BlockType): string {
     switch(blockType) {
-        case 'paragraph': return '500'
+        case 'paragraph': return '600'
         case 'heading2': return '800'
         case 'heading1': return '800'
         case 'title': return '800'
