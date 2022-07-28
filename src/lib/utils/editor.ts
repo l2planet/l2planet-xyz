@@ -1,8 +1,8 @@
-export type BlockType = 'p' | 'h1' | 'h2' | 't' | 's'
+export type BlockType = 'paragraph' | 'heading1' | 'heading2' | 'title' | 'subtitle'
 
 export class Block {
     constructor(id?: string, type?: BlockType) {
-        this.type = type || 'p'
+        this.type = type || 'paragraph'
         this.id = (id || '') + Date.now().toString()
         this.content = ''
     }
@@ -12,29 +12,29 @@ export class Block {
     content: string
 
     setParagraph() {
-        this.type = 'p'
+        this.type = 'paragraph'
     }
     setHeading1() {
-        this.type = 'h1'
+        this.type = 'heading1'
     }
     setHeading2() {
-        this.type = 'h2'
+        this.type = 'heading2'
     }
     setTitle() {
-        this.type = 't'
+        this.type = 'title'
     }
     setSubtitle() {
-        this.type = 's'
+        this.type = 'subtitle'
     }
 
 
     getPlaceholder() {
         switch(this.type) {
-            case 'p': return 'Paragraph comes here...'
-            case 'h2': return 'Small Heading comes here...'
-            case 'h1': return 'Large Heading comes here...'
-            case 't': return 'Title comes here...'
-            case 's': return 'Subtitle comes here...'
+            case 'paragraph': return 'Paragraph comes here...'
+            case 'heading2': return 'Small Heading comes here...'
+            case 'heading1': return 'Large Heading comes here...'
+            case 'title': return 'Title comes here...'
+            case 'subtitle': return 'Subtitle comes here...'
         }
     }
 }
@@ -43,20 +43,20 @@ export class Block {
 
 export function calcFontSize(blockType: BlockType): string {
     switch(blockType) {
-        case 'p': return '1.125rem'
-        case 'h2': return '1.5rem'
-        case 'h1': return '2rem'
-        case 't': return '2.5rem'
-        case 's': return '1.4425rem'
+        case 'paragraph': return '1.125rem'
+        case 'heading2': return '1.5rem'
+        case 'heading1': return '2rem'
+        case 'title': return '2.5rem'
+        case 'subtitle': return '1.4425rem'
     }
 }
 
 export function calcFontWeight(blockType: BlockType): string {
     switch(blockType) {
-        case 'p': return '500'
-        case 'h2': return '800'
-        case 'h1': return '800'
-        case 't': return '800'
-        case 's': return '600'
+        case 'paragraph': return '500'
+        case 'heading2': return '800'
+        case 'heading1': return '800'
+        case 'title': return '800'
+        case 'subtitle': return '600'
     }
 }

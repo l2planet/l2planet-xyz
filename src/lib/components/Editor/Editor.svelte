@@ -1,6 +1,5 @@
 <script lang="ts">
 import { Block } from "$lib/utils/editor";
-import { slide } from "svelte/transition";
 import ButtonTool from "./ButtonTool.svelte";
 
 import Editable from "./Editable.svelte";
@@ -10,8 +9,8 @@ import ToolBar from "./ToolBar.svelte";
 import Wrapper from "./Wrapper.svelte";
 
     let blocks: Block[] = [
-        new Block('t', 't'),
-        new Block('s', 's'),
+        new Block('t', 'title'),
+        new Block('s', 'subtitle'),
         new Block,
     ]
 
@@ -38,7 +37,7 @@ import Wrapper from "./Wrapper.svelte";
     <Editable>
         {#each blocks as blk, key}
             <Line
-                block={blk} 
+                block={blk}
                 on:focus={()=>focus=key}
                 on:keydown={e=>{
                     switch(e.key) {

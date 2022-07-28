@@ -1,11 +1,13 @@
 <script lang="ts">
-import { Block, calcFontSize, calcFontWeight, type BlockType } from "$lib/utils/editor";
+import { Block, calcFontSize, calcFontWeight } from "$lib/utils/editor";
+import { fly } from "svelte/transition";
 
     export let block: Block
 
 </script>
 
 <input
+    transition:fly
     placeholder={block.getPlaceholder()}
     id={block.id}
     on:focus
