@@ -5,30 +5,32 @@ import TableFees from "$lib/components/Stats/TableFees.svelte";
 import TableTps from "$lib/components/Stats/TableTps.svelte";
 import RowFees from "$lib/components/Stats/RowFees.svelte";
 import RowTps from "$lib/components/Stats/RowTps.svelte";
+import Div from "$lib/components/Div.svelte";
 
 </script>
 <!-- Stats Page starts here -->
-<div class="flex flex-col gap-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div class="flex flex-col gap-y-3">
-            <H1>Fees</H1>
-            <TableFees>
-                <RowFees name="Metis"/>
-                <RowFees name="Metis"/>
-                <RowFees name="Metis"/>
-                <RowFees name="Metis"/> 
-                <RowFees name="Metis"/> 
-            </TableFees>
-        </div>
-        <div class="flex flex-col gap-y-3">
-            <H1>TPS</H1>
-            <TableTps>
-                <RowTps name="Metis"/> 
-                <RowTps name="Metis"/> 
-                <RowTps name="Metis"/> 
-                <RowTps name="Metis"/> 
-                <RowTps name="Metis"/> 
-            </TableTps>
-        </div>
-    </div>
+<Div>
+    <H1>Statistics</H1>
+</Div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <Div>
+        <H2>Fees</H2>
+        <TableFees>
+            <RowFees name="Metis"/>
+            <RowFees name="Metis"/>
+            <RowFees name="Metis"/>
+            <RowFees name="Metis"/> 
+            <RowFees name="Metis"/> 
+        </TableFees>
+    </Div>
+    <Div>
+        <H2>TPS</H2>
+        <TableTps>
+            <RowTps name="Metis"/> 
+            <RowTps name="Metis"/> 
+            <RowTps name="Metis"/> 
+            <RowTps name="Metis"/> 
+            <RowTps name="Metis"/> 
+        </TableTps>
+    </Div>
 </div>

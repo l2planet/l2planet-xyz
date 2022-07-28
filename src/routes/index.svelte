@@ -1,7 +1,6 @@
 <script lang="ts">
 import GridChains from "$lib/components/Chains/GridChains.svelte";
 import CardChains from "$lib/components/Chains/CardChains.svelte";
-import ParagraphChains from "$lib/components/Chains/ParagraphChains.svelte";
 import IconEthereum from "$lib/components/icons/IconEthereum.svelte";
 import IconBitcoin from "$lib/components/icons/IconBitcoin.svelte";
 import IconCardano from "$lib/components/icons/IconCardano.svelte";
@@ -11,14 +10,15 @@ import IconFantom from "$lib/components/icons/IconFantom.svelte";
 import IconSysCoin from "$lib/components/icons/IconSysCoin.svelte";
 import IconMoonBeam from "$lib/components/icons/IconMoonBeam.svelte";
 import H1 from "$lib/components/H1.svelte";
+import P1 from "$lib/components/P1.svelte";
+import Div from "$lib/components/Div.svelte";
 
 </script>
 
 <!-- Index Page starts here -->
-
-<div class="flex flex-col gap-y-8">
+<Div>
     <H1>Pick a Path</H1>
-    <ParagraphChains>Pick your path on the road of L2s</ParagraphChains>
+    <P1>Pick your path on the road of L2s</P1>
     <GridChains>
         <CardChains name="Ethereum" href="/ethereum"> <IconEthereum/> </CardChains>
         <CardChains name="Bitcoin" href="/bitcoin"> <IconBitcoin/> </CardChains>
@@ -29,4 +29,4 @@ import H1 from "$lib/components/H1.svelte";
         <CardChains name="MoonBeam" href="/moonbeam"> <IconMoonBeam/> </CardChains>
         <CardChains name="SysCoin" href="/syscoin"> <IconSysCoin/> </CardChains>
     </GridChains>
-</div>
+</Div>
