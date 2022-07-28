@@ -19,18 +19,18 @@
     </a>
     <!-- Navbar that contains anchor elements -->
     <nav class="hidden h-full md:flex items-center gap-x-6">
-        <a href="/" class="flex items-center h-10 px-4 rounded-xl font-medium text-lg text-dark/60 dark:text-white/60 scaler border-and-bg">Home</a>
-        <a href="/newsletter" class="flex items-center h-10 px-4 rounded-xl font-medium text-lg text-dark/60 dark:text-white/60 scaler border-and-bg">Newsletter</a>
-        <a href="/stats" class="flex items-center h-10 px-4 rounded-xl font-medium text-lg  text-dark/60 dark:text-white/60 scaler border-and-bg">Stats</a>
-        <a href="/about" class="flex items-center h-10 px-4 rounded-xl font-medium text-lg text-dark/60 dark:text-white/60 scaler border-and-bg">About</a>
+        <a href="/" class="flex items-center h-10 px-4 rounded-xl font-semibold text-lg scaler btn-full">Home</a>
+        <a href="/newsletter" class="flex items-center h-10 px-4 rounded-xl font-semibold text-lg scaler btn-full">Newsletter</a>
+        <a href="/stats" class="flex items-center h-10 px-4 rounded-xl font-semibold text-lg scaler btn-full">Stats</a>
+        <a href="/about" class="flex items-center h-10 px-4 rounded-xl font-semibold text-lg scaler btn-full">About</a>
     </nav>
     <!-- This button opens and closes `Menu` component -->
-    <button on:click={() => {isMenuOpen = !isMenuOpen; toggleScroll()}} class="md:hidden p-1.5 rounded-full scaler border-and-bg">
+    <button on:click={() => {isMenuOpen = !isMenuOpen; toggleScroll()}} class="md:hidden p-1.5 rounded-full scaler btn-full">
         <IconMenu/> <p hidden>menu</p>
     </button>
     <!-- This button opens and closes the `ThemeDropdown` component -->
     <div class="hidden md:flex justify-end min-w-[8.75rem]">
-        <button on:click={() => isThemeOpen = !isThemeOpen} class="p-1.5 rounded-full scaler border-and-bg">
+        <button on:click={() => isThemeOpen = !isThemeOpen} class="p-1.5 rounded-full scaler btn-full">
             <IconTheme/>
         </button>
     </div>

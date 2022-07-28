@@ -13,8 +13,8 @@ import { slide } from 'svelte/transition'
         <a on:click href="/about" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-dark/60 dark:text-lite/60">About</a>
     </nav>
     <div on:click class="flex w-fit gap-x-5 min-h-14">
-        <button on:click={theme.setDark} class="font-semibold text-xl h-12 px-4 rounded-xl scaler border-and-bg">Dark</button>
-        <button on:click={theme.setLight} class="font-semibold text-xl h-12 px-4 rounded-xl scaler border-and-bg">Light</button>
-        <button on:click={theme.setSystem} class="font-semibold text-xl h-12 px-4 rounded-xl scaler border-and-bg">System</button>
+        <button on:click={theme.setDark} class="font-semibold text-xl h-12 px-4 rounded-xl scaler btn-full">Dark</button>
+        <button on:click={theme.setLight} class="font-semibold text-xl h-12 px-4 rounded-xl scaler btn-full">Light</button>
+        <button on:click={theme.setSystem} class="font-semibold text-xl h-12 px-4 rounded-xl scaler btn-full">System</button>
     </div>
 </div>
