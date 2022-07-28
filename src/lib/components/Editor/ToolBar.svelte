@@ -1,3 +1,3 @@
-<div class="sticky h-14 rounded-2xl border border-slate-300 dark:border-slate-600 dark:bg-slate-800">
+<div class="sticky flex justify-between h-16 p-3 rounded-2xl border border-slate-300 dark:border-slate-600 dark:bg-slate-800 select-none">
     <slot/>
 </div>

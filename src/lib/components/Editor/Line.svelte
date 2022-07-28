@@ -2,16 +2,17 @@
 import { Block, calcFontSize, calcFontWeight, type BlockType } from "$lib/utils/editor";
 
     export let block: Block
-    const placeholder: string = block.getPlaceholder()
 
 </script>
 
 <input
-    placeholder={placeholder}
+    placeholder={block.getPlaceholder()}
     id={block.id}
     on:focus
     on:keydown
     on:keyup
+    on:keypress
+    bind:value={block.content}
 
     class="px-6 py-3 rounded-2xl bg-slate-100 dark:bg-slate-700 outline-none"
     style="
