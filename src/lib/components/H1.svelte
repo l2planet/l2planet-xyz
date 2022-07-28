@@ -1,3 +1,3 @@
-<h1 class="font-bold text-5xl md:text-6xl">
+<h1 class="font-semibold text-center text-4xl sm:text-5xl lg:text-6xl">
     <slot/>
 </h1>
