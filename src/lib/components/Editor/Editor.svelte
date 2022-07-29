@@ -53,7 +53,7 @@ import Wrapper from "./Wrapper.svelte";
         {/each}
     </Editable>
     <ToolBar>
-        <p class="flex items-center font-medium text-dark/70 dark:text-lite/70">When you export the text, the whole content will be in console. Press Fn + F12 to see'em.</p>
+        <p class="flex items-center font-medium text-xs sm:text-sm md:text-base text-dark/70 dark:text-lite/70">When you export the text, the whole content will be in console. Press Fn + F12 to see'em.</p>
         <SendButton on:click={()=>{blocks.forEach(block => console.log(block))}}>Export</SendButton>
     </ToolBar>
 </Wrapper>
