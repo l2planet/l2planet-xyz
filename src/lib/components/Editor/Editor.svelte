@@ -44,6 +44,7 @@ import Wrapper from "./Wrapper.svelte";
             <ButtonTool on:click={() => {blocks[focus].setHeading1(); blocks = blocks}}>Large Heading</ButtonTool>
             <ButtonTool on:click={() => {blocks[focus].setHeading2(); blocks = blocks}}>Small Heading</ButtonTool>
             <ButtonTool on:click={() => {blocks[focus].setParagraph(); blocks = blocks}}>Paragraph</ButtonTool>
+            <ButtonTool on:click={() => {blocks[focus].setImage(); blocks = blocks}}>Image</ButtonTool>
         </ToolBar>
         <Editable>
             {#each blocks as blk, key}

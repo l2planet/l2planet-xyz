@@ -1,4 +1,4 @@
-export type BlockType = 'paragraph' | 'heading1' | 'heading2' | 'title' | 'subtitle'
+export type BlockType = 'paragraph' | 'heading1' | 'heading2' | 'title' | 'subtitle' | 'image'
 
 export class Block {
     constructor(id?: string, type?: BlockType) {
@@ -26,37 +26,19 @@ export class Block {
     setSubtitle() {
         this.type = 'subtitle'
     }
+    setImage() {
+        this.type = 'image'
+    }
 
 
-    getPlaceholder() {
+    getPlaceholder(): string {
         switch(this.type) {
             case 'paragraph': return 'Paragraph comes here...'
             case 'heading2': return 'Small Heading comes here...'
             case 'heading1': return 'Large Heading comes here...'
             case 'title': return 'Title comes here...'
             case 'subtitle': return 'Subtitle comes here...'
+            case 'image': return 'Paste an URL...'
         }
-    }
-}
-
-
-
-export function calcFontSize(blockType: BlockType): string {
-    switch(blockType) {
-        case 'paragraph': return '1.125rem'
-        case 'heading2': return '1.5rem'
-        case 'heading1': return '2rem'
-        case 'title': return '2.5rem'
-        case 'subtitle': return '1.4425rem'
-    }
-}
-
-export function calcFontWeight(blockType: BlockType): string {
-    switch(blockType) {
-        case 'paragraph': return '600'
-        case 'heading2': return '800'
-        case 'heading1': return '800'
-        case 'title': return '800'
-        case 'subtitle': return '600'
     }
 }
