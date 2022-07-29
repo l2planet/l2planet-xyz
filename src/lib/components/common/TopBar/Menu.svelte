@@ -4,7 +4,7 @@ import { slide } from 'svelte/transition'
 </script>
 
 <!-- Menu screen will only be displayed on mobile screens --> 
-<div transition:slide={{duration: 200}} class="md:hidden fixed left-0 top-16 flex flex-col p-4 gap-y-8 w-full min-h-fit h-[calc(100vh-4rem)] overflow-y-auto bg-lite/60 dark:bg-dark/60 backdrop-blur-xl select-none">
+<div transition:slide={{duration: 200}} class="md:hidden fixed left-0 top-16 z-30 flex flex-col p-4 gap-y-8 w-full min-h-fit h-[calc(100vh-4rem)] overflow-y-auto bg-lite/60 dark:bg-dark/60 backdrop-blur-xl select-none">
     <!-- Each anchor element represents a section of the website -->
     <nav class="flex flex-col min-h-96 gap-y-2">
         <a on:click href="/" class="flex items-center p-3 min-h-16 font-semibold text-3xl text-dark/60 dark:text-lite/60">Home</a>
