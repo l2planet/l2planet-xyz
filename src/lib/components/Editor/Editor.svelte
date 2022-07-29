@@ -1,5 +1,8 @@
 <script lang="ts">
 import { Block } from "$lib/utils/editor";
+import IconAdd from "../icons/IconAdd.svelte";
+import IconSend from "../icons/IconSend.svelte";
+import ButtonIcon from "./ButtonIcon.svelte";
 import ButtonTool from "./ButtonTool.svelte";
 
 import Editable from "./Editable.svelte";
@@ -41,19 +44,20 @@ import Wrapper from "./Wrapper.svelte";
                 on:focus={()=>focus=key}
                 on:keydown={e=>{
                     switch(e.key) {
-                        case 'Enter': {blocks = [...blocks.slice(0, key), blocks[key], new Block() ,...blocks.slice(key+1)]; focus = key +1; break}
-                        case 'Backspace': {if(blocks[key].content.length != 0 || blocks.length < 2 || focus == 0) return; blocks = [...blocks.slice(0, key), ...blocks.slice(key + 1)]; focus = key -1; break}
                         case 'ArrowUp': {if(focus>0) focus = key -1; break}
                         case 'ArrowDown': {if(focus<blocks.length-1) focus = key +1; break}
                         case 'ArrowLeft': {if(focus>0) focus = key -1; break}
                         case 'ArrowRight': {if(focus<blocks.length-1) focus = key +1; break}
                     }
                 }}
+                onRemove={()=>{if(key==0) return; blocks = [...blocks.slice(0, key), ...blocks.slice(key +1)]}}
+                onUp={()=>{if(key==0) return; blocks = [...blocks.slice(0, key - 1), blocks[key], blocks[key-1], ...blocks.slice(key+1)]}}
+                onDown={()=>{if(key== blocks.length -1) return; blocks = [...blocks.slice(0, key), blocks[key+1], blocks[key], ...blocks.slice(key+2)]}}
             />
         {/each}
+        <div class="flex justify-between">
+            <ButtonIcon on:click={() => {if(focus == blocks.length - 1) focus = focus + 1; blocks = [...blocks, new Block()]}}><IconAdd/></ButtonIcon>
+            <ButtonIcon><IconSend/></ButtonIcon>
+        </div>
     </Editable>
-    <ToolBar>
-        <p class="flex items-center font-medium text-xs sm:text-sm md:text-base text-dark/70 dark:text-lite/70">When you export the text, the whole content will be in console. Press Fn + F12 to see'em.</p>
-        <SendButton on:click={()=>{blocks.forEach(block => console.log(block))}}>Export</SendButton>
-    </ToolBar>
 </Wrapper>
