@@ -42,7 +42,7 @@ import Wrapper from "./Wrapper.svelte";
                 on:keydown={e=>{
                     switch(e.key) {
                         case 'Enter': {blocks = [...blocks.slice(0, key), blocks[key], new Block() ,...blocks.slice(key+1)]; focus = key +1; break}
-                        case 'Backspace': {if(blocks[key].content.length != 0 || blocks.length < 2) return; blocks = [...blocks.slice(0, key), ...blocks.slice(key + 1)]; focus = key -1; break}
+                        case 'Backspace': {if(blocks[key].content.length != 0 || blocks.length < 2 || focus == 0) return; blocks = [...blocks.slice(0, key), ...blocks.slice(key + 1)]; focus = key -1; break}
                         case 'ArrowUp': {if(focus>0) focus = key -1; break}
                         case 'ArrowDown': {if(focus<blocks.length-1) focus = key +1; break}
                         case 'ArrowLeft': {if(focus>0) focus = key -1; break}
