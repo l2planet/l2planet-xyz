@@ -34,10 +34,10 @@ import IconArrowDown from "../icons/IconArrowDown.svelte";
     }"
 />
 <div class="flex pr-6 gap-x-4 items-center">
-    <button on:click={onRemove}><IconRemove/></button>
+    <button class="hover:bg-dark/10 active:bg-dark/20 dark:hover:bg-lite/10 dark:active:bg-lite/20 rounded-full p-1 duration-200"  on:click={onRemove}><IconRemove/></button>
     <div class="flex flex-col gap-y-2">
-        <button on:click={onUp}><IconArrowUp/></button>
-        <button on:click={onDown}><IconArrowDown/></button>
+        <button class="hover:bg-dark/10 active:bg-dark/20 dark:hover:bg-lite/10 dark:active:bg-lite/20 rounded-full p-1 duration-200" on:click={onUp}><IconArrowUp/></button>
+        <button class="hover:bg-dark/10 active:bg-dark/20 dark:hover:bg-lite/10 dark:active:bg-lite/20 rounded-full p-1 duration-200" on:click={onDown}><IconArrowDown/></button>
     </div>  
 </div>
 </div>
