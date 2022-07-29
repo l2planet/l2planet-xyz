@@ -56,8 +56,8 @@ import Wrapper from "./Wrapper.svelte";
             />
         {/each}
         <div class="flex justify-between">
-            <ButtonIcon on:click={() => {if(focus == blocks.length - 1) focus = focus + 1; blocks = [...blocks, new Block()]}}><IconAdd/></ButtonIcon>
             <ButtonIcon><IconSend/></ButtonIcon>
+            <ButtonIcon on:click={() => {if(focus == blocks.length - 1) focus = focus + 1; blocks = [...blocks, new Block()]}}><IconAdd/></ButtonIcon>
         </div>
     </Editable>
 </Wrapper>

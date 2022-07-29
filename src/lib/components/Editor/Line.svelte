@@ -1,7 +1,5 @@
 <script lang="ts">
 import type { Block } from "$lib/utils/editor";
-import { fly } from "svelte/transition";
-import ButtonIcon from "./ButtonIcon.svelte";
 import IconRemove from "../icons/IconRemove.svelte";
 import IconArrowUp from "../icons/IconArrowUp.svelte";
 import IconArrowDown from "../icons/IconArrowDown.svelte";
@@ -15,7 +13,6 @@ import IconArrowDown from "../icons/IconArrowDown.svelte";
 
 <div class="flex relative items-center py-3 rounded-2xl bg-slate-100 dark:bg-slate-700 ">
 <input
-    transition:fly={{duration: 200}}
     placeholder={block.getPlaceholder()}
     id={block.id}
     on:focus
