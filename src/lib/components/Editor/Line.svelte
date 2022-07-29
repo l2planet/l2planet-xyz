@@ -33,7 +33,7 @@ import IconArrowDown from "../icons/IconArrowDown.svelte";
         block.type == 'subtitle' ? 'leading-10 text-2xl sm:text-3xl font-bold text-sky-600 dark:text-sky-300 placeholder:text-sky-600/50 placeholder:dark:text-sky-300/50' : ''
     }"
 />
-<div class="flex pr-6 gap-x-4 items-center">
+<div class="flex pr-6 gap-x-2 items-center">
     <button class="hover:bg-dark/10 active:bg-dark/20 dark:hover:bg-lite/10 dark:active:bg-lite/20 rounded-full p-1 duration-200"  on:click={onRemove}><IconRemove/></button>
     <div class="flex flex-col gap-y-2">
         <button class="hover:bg-dark/10 active:bg-dark/20 dark:hover:bg-lite/10 dark:active:bg-lite/20 rounded-full p-1 duration-200" on:click={onUp}><IconArrowUp/></button>
