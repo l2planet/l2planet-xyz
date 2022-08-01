@@ -1,6 +1,4 @@
 <script lang="ts">
-import TweetBox from "$lib/components/common/TweetBox.svelte";
-
     import { onDragOver, onDrop, onPaste, type Block } from "$lib/utils/editor";
     
     export let block: Block
@@ -29,7 +27,6 @@ import TweetBox from "$lib/components/common/TweetBox.svelte";
     id={block.id}
     bind:textContent={block.content}
     on:keydown
-    on:input={()=>console.log(document.getElementById('hj'))}
     on:focus
     on:paste={onPaste}
     on:drop={onDrop}
