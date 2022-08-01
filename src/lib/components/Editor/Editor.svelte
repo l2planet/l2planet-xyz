@@ -1,73 +1,89 @@
 <script lang="ts">
-import { Block } from "$lib/utils/editor";
-import IconAdd from "../icons/IconAdd.svelte";
-import IconSend from "../icons/IconSend.svelte";
-import ButtonIcon from "./ButtonIcon.svelte";
-import ButtonView from "./ButtonView.svelte";
-import ButtonTool from "./ButtonTool.svelte";
-import EditorParser from "../common/EditorParser/EditorParser.svelte";
-
-import Editable from "./Editable.svelte";
-import Line from "./Line.svelte";
-import SendButton from "./SendButton.svelte";
-import ToolBar from "./ToolBar.svelte";
 import Wrapper from "./Wrapper.svelte";
+import { BACKSPACE, Block, CMD, DOWN, ENTER, getCursorPosition, getToolAxis, LEFT, RIGHT, setCursorPosition, UP } from "$lib/utils/editor";
+import EditableBlock from "./EditableBlock.svelte";
+import Tool from "./Tool.svelte";
+import Large from "./Blocks/Large.svelte";
+import Link from "./Blocks/Link.svelte";
 
-    let showView: boolean = false
+    let toolAxis = [0, 0]
+    let toolShown: boolean = false
 
-    let blocks: Block[] = [
-        new Block('t', 'title'),
-        new Block('s', 'subtitle'),
-        new Block,
-    ]
-
+    let editorBlocks: Block[] = [new Block('t', 'Title'), new Block('s', 'Subtitle'), new Block]
     let focus: number = 0
-    $: {
-        console.log(focus);
-        if(typeof window !== 'undefined') setTimeout(() => {
-            const blockElement = document.getElementById(blocks[focus]?.id) as HTMLInputElement
-            blockElement?.focus()
-            blockElement?.setSelectionRange(blockElement.value.length, blockElement.value.length)
-        }, 0)
-    }
+    $: if(typeof window !== 'undefined') setTimeout(() => {
+        toolShown = false
+        const elem = document.getElementById(editorBlocks[focus].id) as HTMLDivElement
+        elem.focus()
+        setCursorPosition(elem, elem?.textContent?.length || 0)
+    } , 0)
 
+    function onKeyDown(e: KeyboardEvent) {
+        const target = e.target as HTMLDivElement
+        const cursor = getCursorPosition(target)
+        switch(e.key) {
+            case ENTER: {
+                e.preventDefault()
+                if(focus < 1) {focus += 1; return}
+                editorBlocks = [...editorBlocks.slice(0, focus), editorBlocks[focus], new Block, ...editorBlocks.slice(focus+1)]
+                focus += 1
+                break
+            }
+            case BACKSPACE: {
+                if(target.textContent || focus == 0) return
+                if(focus < 2) {focus -= 1; return}
+                editorBlocks = [...editorBlocks.slice(0, focus), ...editorBlocks.slice(focus+1)]
+                focus -= 1;
+                break
+            }
+            case UP: {
+                if(focus == 0) return
+                focus -= 1
+                break
+            }
+            case DOWN: {
+                if(target.textContent?.length != cursor || focus == editorBlocks.length - 1) return
+                focus += 1
+                break
+            }
+            case LEFT: {
+                if(focus == 0 || cursor !== 0) return
+                focus -= 1
+                break
+            }
+            case RIGHT: {
+                if(target.textContent?.length != cursor || focus == editorBlocks.length - 1) return
+                focus += 1
+                break
+            }
+            case CMD: {
+                if(focus < 2) return; 
+                toolShown = !toolShown
+                toolAxis = getToolAxis(target)
+            }
+        }
+        if(e.key != CMD) toolShown = false
+    }
 </script>
 
-<ButtonView on:click={()=>showView = !showView}>{showView ? 'Go to Editor' : 'Go to View'}</ButtonView>
 <Wrapper>
-    {#if showView}
-        <EditorParser blocks={blocks}/>
-    {:else}
-        <ToolBar>
-            <ButtonTool on:click={() => {blocks[focus].setTitle(); blocks = blocks}}>Title</ButtonTool>
-            <ButtonTool on:click={() => {blocks[focus].setSubtitle(); blocks = blocks}}>Subtitle</ButtonTool>
-            <ButtonTool on:click={() => {blocks[focus].setHeading1(); blocks = blocks}}>Large Heading</ButtonTool>
-            <ButtonTool on:click={() => {blocks[focus].setHeading2(); blocks = blocks}}>Small Heading</ButtonTool>
-            <ButtonTool on:click={() => {blocks[focus].setParagraph(); blocks = blocks}}>Paragraph</ButtonTool>
-            <ButtonTool on:click={() => {blocks[focus].setImage(); blocks = blocks}}>Image</ButtonTool>
-        </ToolBar>
-        <Editable>
-            {#each blocks as blk, key}
-                <Line
-                    block={blk}
-                    on:focus={()=>focus=key}
-                    on:keydown={e=>{
-                        switch(e.key) {
-                            case 'ArrowUp': {if(focus>0) focus = key -1; break}
-                            case 'ArrowDown': {if(focus<blocks.length-1) focus = key +1; break}
-                            case 'ArrowLeft': {if(focus>0) focus = key -1; break}
-                            case 'ArrowRight': {if(focus<blocks.length-1) focus = key +1; break}
-                        }
-                    }}
-                    onRemove={()=>{if(key==0) return; blocks = [...blocks.slice(0, key), ...blocks.slice(key +1)]}}
-                    onUp={()=>{if(key==0) return; blocks = [...blocks.slice(0, key - 1), blocks[key], blocks[key-1], ...blocks.slice(key+1)]}}
-                    onDown={()=>{if(key== blocks.length -1) return; blocks = [...blocks.slice(0, key), blocks[key+1], blocks[key], ...blocks.slice(key+2)]}}
-                />
-            {/each}
-            <div class="flex justify-between">
-                <ButtonIcon><IconSend/></ButtonIcon>
-                <ButtonIcon on:click={() => {if(focus == blocks.length - 1) focus = focus + 1; blocks = [...blocks, new Block()]}}><IconAdd/></ButtonIcon>
-            </div>
-        </Editable>
-    {/if}
+    {#each editorBlocks as block, index}
+        <EditableBlock {block}
+        on:keydown={onKeyDown}
+        on:focus={() => {focus = index; toolShown = false}}
+    />
+    {/each}
 </Wrapper>
+<Tool isShown={toolShown} left={toolAxis[0]} top={toolAxis[1]}
+    onImage={()=>editorBlocks[focus].type = 'Image'}
+    onLarge={()=>editorBlocks[focus].type = 'Large'}
+    onLink={()=>editorBlocks[focus].type = 'Link'}
+    onList={()=>editorBlocks[focus].type = 'List'}
+    onMedium={()=>editorBlocks[focus].type = 'Medium'}
+    onNote={()=>editorBlocks[focus].type = 'Note'}
+    onSmall={()=>editorBlocks[focus].type = 'Small'}
+    onText={()=>editorBlocks[focus].type = 'Text'}
+    onTweet={()=>editorBlocks[focus].type = 'Tweet'}
+    onYoutube={()=>editorBlocks[focus].type = 'Youtube'}
+    on:click={()=>{toolShown = false; editorBlocks[focus].content = editorBlocks[focus].content.slice(0, editorBlocks[focus].content.length-1)}}
+/>

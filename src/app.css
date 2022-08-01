@@ -43,3 +43,24 @@ body.dark {
     @apply
     hover:scale-105 active:scale-90;
 }
+
+.editor-block {
+    @apply
+    rounded-2xl py-1.5 px-4 sm:py-2 sm:px-5 md:py-3 md:px-6 h-full
+    border border-lite focus-within:border-slate-300 dark:border-dark dark:focus-within:border-slate-700
+    bg-transparent
+    empty:text-dark/25 dark:empty:text-lite/25
+    hover:bg-slate-100 focus-within:bg-slate-100
+    dark:hover:bg-slate-800 dark:focus-within:bg-slate-800
+    outline-none duration-200 overflow-hidden break-words
+    empty:before:content-[attr(placeholder)] cursor-text;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #88888880;
+}
