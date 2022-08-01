@@ -81,13 +81,11 @@ export function getToolAxis(elem: HTMLDivElement): [number, number] {
 
 
 export function onPaste(e: ClipboardEvent) {
-    e.preventDefault()
-    const target = e.target as HTMLDivElement
-    const data = e.clipboardData?.getData('text/plain')
-    if(!data) return
-    const cursor = getCursorPosition(target)
-    target.textContent += data
-    setCursorPosition(target, cursor + data.length)
+    e.preventDefault();
+    const clipboardData = e.clipboardData
+    if(!clipboardData) return
+    const text = clipboardData.getData('text/plain')
+    document.execCommand('insertText', false, text)
 }
 
 export function onDrop(e: DragEvent) {
