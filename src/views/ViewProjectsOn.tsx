@@ -2,7 +2,6 @@ import { wrapn } from "wrapn";
 import { Grid4CardsCommon } from "../components/chains/common";
 import { PrimaryInfoCommon } from "../components/chains/PrimaryInfoCommon";
 import { CardProject } from "../components/chains/common";
-import { GridProject } from "../components/projects/GridProject";
 import { L2SolutionFromAPI } from "../types/external";
 import { L2Solution } from "../types/internal";
 
