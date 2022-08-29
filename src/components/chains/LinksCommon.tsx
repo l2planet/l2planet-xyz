@@ -4,7 +4,7 @@ import { L2Solution, Project } from "../../types/internal";
 
 export const LinksCommon = <T extends L2Solution | Project>({ data: {website, twitter, gecko, github} }: { data: T }) => (
     <FlexLinks>
-        {website && <ALink href={website}>Website</ALink>}
+        {website && <ALink href={`https://${website}`}>Website</ALink>}
         {twitter && <ALink href={`https://twitter.com/${twitter}`}>Twitter</ALink>}
         {gecko && <ALink href={`https://www.coingecko.com/en/coins/${gecko}`}>Gecko</ALink>}
         {github && <ALink href={`https://github.com/${github}`}>GitHub</ALink>}
