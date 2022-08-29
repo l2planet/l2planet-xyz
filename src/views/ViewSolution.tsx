@@ -1,75 +1,62 @@
-import { Timeline } from "react-twitter-widgets"
+import Link from "next/link"
 import { wrapn } from "wrapn"
-import { L2Solution } from "../types/constants"
+import { SolutionPart } from "../components/solutions"
+import { Twitter } from "../components/Twitter"
+import { Video } from "../components/Video"
+import { SecondaryInfoCommon } from "../components/chains/SecondaryInfoCommon"
+import { L2Solution } from "../types/internal"
 
-export const ViewSolution = ({ solution: { name, logo, description, website, twitter, gecko, investorLogos } }: { solution: L2Solution }) => {
+export const ViewSolution = ({ solution }: { solution: L2Solution }) => {
     return (
-        <Div>
-            <DivSolutionData>
-                <DivSolutionInfo>
-                    <Img src={logo} alt={`${name} logo`}/>
-                    <Name>{name}</Name>
-                </DivSolutionInfo>
-                <Price>$ 1.36</Price>
-            </DivSolutionData>
-            <Description>{description}</Description>
-            <DivTimeline>
-                <Timeline dataSource={{sourceType: 'Profile', screenName: twitter}} options={{ theme: 'dark' }}/>
-            </DivTimeline>
-        </Div>
+        <>
+            <SecondaryInfoCommon data={solution}/>
+
+            <DivColLgRow className="lg:flex-row-reverse">
+                <SolutionPart label={`Projects on ${solution.name}`}>
+                    <Link href={`/projects_on/${solution.id}`} passHref>
+                        <Projects>See Projects</Projects>
+                    </Link>
+                </SolutionPart>
+                <SolutionPart label='TVL - Total Value Locked'>
+                    <TestTVLChart/>
+                </SolutionPart>
+            </DivColLgRow>
+            <DivColLgRow>
+                <SolutionPart label='Video'>
+                    <Video id={solution.video}/>
+                </SolutionPart>
+                <div className="lg:max-w-sm w-full">
+                    <SolutionPart label={solution.twitter ? `Tweets by @${solution.twitter}` : 'No Twitter Account'}>
+                        <Twitter id={solution.twitter}/>
+                    </SolutionPart>
+                </div>
+            </DivColLgRow>
+            
+        </>
     )
 }
 
 
 
-
-const Div = wrapn('div')`
-    flex flex-col
-    gap-y-6
+const DivColLgRow = wrapn('div')`
+    flex flex-col lg:flex-row justify-between
+    gap-y-10 sm:gap-y-12 md:gap-y-14 lg:gap-y-16 gap-x-5
 `
 
-const DivSolutionInfo = wrapn('div')`
-    flex items-center
-    gap-x-4
+
+const Projects = wrapn('a')`
+    flex items-center justify-center
+    w-full h-24 sm:h-32 md:h-40
+    font-bold
+    text-[1.75rem] sm:text-4xl md:text-5xl
+    rounded-xl
+    hover:scale-[1.025] active:scale-[.975]
+    border
+    border-sky-400
+    dark:border-blue-500
+    bg-sky-300/70 hover:bg-sky-400/70 active:bg-sky-300/70
+    dark:bg-blue-600/70 dark:hover:bg-blue-500/70 dark:active:bg-blue-600/70
+    duration-200
 `
 
-const DivSolutionData = wrapn('div')`
-    flex justify-between
-`
-
-const Name = wrapn('h1')`
-    font-extrabold
-    text-3xl sm:text-4xl md:text-5xl
-`
-
-const Img = wrapn('img')`
-    h-14 sm:h-[4.5rem] md:h-20
-    aspect-square
-`
-
-const Price = wrapn('div')`
-    flex justify-center items-center
-    h-[3.25rem] sm:h-16 md:h-[4.5rem]
-    px-4 sm:px-6 md:px-8
-    rounded-2xl
-    font-extrabold
-    text-xl sm:text-2xl md:text-3xl
-    dark:border-indigo-700
-    bg-indigo-300
-    dark:bg-indigo-800
-`
-
-const Description = wrapn('div')`
-    font-semibold text-left
-    sm:text-lg md:text-xl
-`
-
-const DivTimeline = wrapn('div')`
-    w-full max-w-sm h-[calc(100vh-20rem)] overflow-y-auto
-    rounded-xl p-[-10px]
-    border-y
-    border-slate-200
-    dark:border-slate-800
-    bg-slate-200
-    dark:bg-slate-800
-`
+const TestTVLChart = wrapn('div')`h-40 rounded-xl bg-indigo-200 dark:bg-indigo-900`

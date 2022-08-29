@@ -1,5 +1,5 @@
 import { wrapn } from "wrapn";
-import { Block } from "../../types/constants";
+import { Block } from "../../types/external";
 import { PolymorphicBlock } from "./PolymorphicBlock";
 
 export const Blocker = ({ blocks }: { blocks: Block[] }) => (

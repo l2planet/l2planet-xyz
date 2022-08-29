@@ -1,4 +1,4 @@
-import { RPCGetTokenAccountsByOwner } from "../types/constants"
+import { RPCGetTokenAccountsByOwner } from "../types/external"
 import { makePostRequest } from "./makePostRequest"
 
 export const checkIfHasPassToken = async (publicKey: string) => {

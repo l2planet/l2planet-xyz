@@ -17,7 +17,7 @@ export const BottomBar = () => (
                 <Title>DAO</Title>
                 <ItemWrapper>
                     <Item href='/about' name='About Us'/>
-                    <Item href='/' name='Writers'/>
+                    <Item href='/' name='Members'/>
                     <Item href='/' name='Donations'/>
                 </ItemWrapper>
             </Box>

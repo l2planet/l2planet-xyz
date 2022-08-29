@@ -1,5 +1,5 @@
 import { wrapn } from "wrapn"
-import { Block } from "../../types/constants"
+import { Block } from "../../types/external"
 
 
 export const Heading2 = ({ block }: { block: Block }) => (

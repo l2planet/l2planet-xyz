@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { wrapn } from "wrapn";
-import { L2SolutionFromAPI } from "../../types/external";
+import { L2SolutionFromAPI, ProjectFromAPI } from "../../types/external";
 
-export const CardSolution = ({ solution, chainId }: { solution: L2SolutionFromAPI, chainId: string }) => (
-    <Link href={`/chain/${chainId}/${solution.id}`} passHref>
+const Card = ({ data, href }: { data: L2SolutionFromAPI | ProjectFromAPI, href: string }) => (
+    <Link href={href} passHref>
         <A>
             <DivInfo>
-                <Img src={solution.logo}/>
-                <Name>{solution.name}</Name>
+                <Img src={data.logo}/>
+                <Name>{data.name}</Name>
             </DivInfo>
         </A>
     </Link>
@@ -16,7 +16,7 @@ export const CardSolution = ({ solution, chainId }: { solution: L2SolutionFromAP
 
 const A = wrapn('a')`
     flex flex-col justify-center
-    p-3 sm:p-4
+    p-4 sm:p-5 md:p-6 lg:p-5
     hover:scale-105 active:scale-95
     rounded-3xl border
     border-indigo-300
@@ -31,12 +31,12 @@ const DivInfo = wrapn('div')`
 `
 
 const Img = wrapn('img')`
-    h-[10vw] sm:h-[7.5vw] lg:h-[5vw] max-h-16
+    h-[10vw] lg:h-[6vw]  xl:h-14
     drop-shadow-[0_0_1rem_#00000040]
     dark:drop-shadow-[0_0_1rem_#ffffff40]
 `
 
 const Name = wrapn('h3')`
-    font-semibold
-    text-[4vw] sm:text-[3vw] lg:text-[min(2vw,1.6rem)]
+    font-bold
+    text-[4vw] sm:text-[3vw]  lg:text-[2.5vw] xl:text-2xl
 `

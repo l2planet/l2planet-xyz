@@ -1,6 +1,6 @@
 import { ComponentProps, MouseEventHandler, MutableRefObject, useCallback, useEffect, useRef, useState } from "react"
 import { wrapn } from "wrapn"
-import { Block } from "../../types/constants"
+import { Block } from "../../types/external"
 import { Blocker } from "../Blocker"
 import { BlockClass } from "./classes"
 import { EditableBlock } from "./components"

@@ -1,4 +1,4 @@
-import { Phantom } from "./constants"
+import { Phantom } from "./external"
 
 export {}
 

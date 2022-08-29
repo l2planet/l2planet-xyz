@@ -1,5 +1,5 @@
 import { Tweet } from "./Tweet"
-import { Block } from "../../types/constants"
+import { Block } from "../../types/external"
 import { Code } from "./Code"
 import { Heading1 } from "./Heading1"
 import { Heading2 } from "./Heading2"

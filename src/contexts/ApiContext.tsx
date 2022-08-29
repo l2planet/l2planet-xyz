@@ -1,9 +1,9 @@
-import { createContext, ReactNode, useContext, useEffect } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import { ApiData } from "../types/constants";
+import { DataFromAPI, L1ChainFromAPI } from "../types/external";
 
 interface ApiContextState {
-    data?: ApiData
+    data: DataFromAPI | null
 }
 
 // The Context
@@ -17,17 +17,18 @@ export const useApi = () => useContext(ApiContext)
 // Component to provider the context
 export const ApiProvider = ({ children }: { children: ReactNode }) => {
     // We cache it using localStorage to speed up page loading
-    const [apiData, setApiData] = useLocalStorage<ApiData | undefined>('apiData', undefined)
+    const [data, setData] = useState<DataFromAPI | null>(null)
 
-    // When the page is rendered, request data from API, and set apiData value
+    // When the page is rendered, request data from API, and set `data` state value
     useEffect(() => {
-        const data = require('../jsons/chains.json') as ApiData
-        setApiData(data)
-    }, [setApiData])
+        setData(
+            require('../jsons/chains.json') as DataFromAPI
+        )
+    }, [])
 
     return (
         <ApiContext.Provider value={{
-            data: apiData
+            data,
         }}>
             {children}
         </ApiContext.Provider>

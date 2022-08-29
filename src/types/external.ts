@@ -55,27 +55,52 @@ export interface BlockLink {
 }
 
 
-export type ApiData = {
-    [key in string]?: L1Chain
-}
 
-
-export interface L1Chain {
-    name: string
-    id: string
-    description: string
-    logo: string
+export type DataFromAPI = {
+    chains: {
+        [key in string]?: L1ChainFromAPI
+    }
     solutions: {
-        [key in string]: L2Solution
+        [key in string]?: L2SolutionFromAPI
+    }
+    projects: {
+        [key in string]?: ProjectFromAPI
     }
 }
 
-export interface L2Solution {
+export interface L1ChainFromAPI {
+    icon: string
     name: string
-    description: string
-    logo: string
-    website: string
-    twitter: string
-    gecko: string
-    investorLogos: string[]
+    text: string
+    solutions?: string[]
 }
+
+export interface L2SolutionFromAPI {
+    icon: string
+    name: string
+    text: string
+    tvl: number
+    projects?: string[]
+    price?: string
+    website?: string
+    twitter?: string
+    gecko?: string
+    github?: string
+    video?: string
+    investors?: string[]
+}
+
+export interface ProjectFromAPI {
+    icon: string
+    name: string
+    text: string
+    price?: string
+    solutionId: string
+    website?: string
+    twitter?: string
+    gecko?: string
+    github?: string
+    video?: string
+    investors?: string[]
+}
+

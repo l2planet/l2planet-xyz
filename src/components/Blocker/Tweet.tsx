@@ -1,16 +1,12 @@
 import { wrapn } from "wrapn"
-import { Block } from "../../types/constants"
+import { Block } from "../../types/external"
 import { Tweet as T } from 'react-twitter-widgets'
 
 
 export const Tweet = ({ block }: { block: Block }) => {
     return (
         <Div>
-            <T tweetId={block.content}
-                options={{
-                    theme: 'light',
-                }}
-            />
+            <T tweetId={block.content} options={{ theme: 'dark' }}/>
         </Div>
     )
 

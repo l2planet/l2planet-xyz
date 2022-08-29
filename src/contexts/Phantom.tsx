@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from "react";
 import { checkIfHasPassToken } from "../functions/checkIfHasPassToken";
-import { MessageSignature, Signature } from "../types/constants";
+import { MessageSignature, Signature } from "../types/external";
 
 // Interface for the context state
 interface PhantomContextState {

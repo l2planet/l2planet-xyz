@@ -6,6 +6,7 @@ export default function Document() {
         <Html className='dark'>
             <Head>
                 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;550;600;700;800&display=swap" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap" rel="stylesheet"/>
                 <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
             </Head>
             <Body>

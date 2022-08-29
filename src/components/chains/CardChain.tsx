@@ -1,12 +1,12 @@
-import Image from "next/image"
 import Link from "next/link"
 import { wrapn } from "wrapn"
-import { L1Chain } from "../../types/constants"
+import { L1ChainFromAPI } from "../../types/external"
+import { L1Chain } from "../../types/internal"
 
-export const CardChain = ({ chain, id }: { chain: L1Chain, id: string}) => (
-    <Link href={`/chain/${id}`} passHref>
+export const CardChain = ({ chain, chainId }: { chain: L1ChainFromAPI, chainId: string }) => (
+    <Link href={`/chains/${chainId}`} passHref>
         <A>
-            <Img src={chain.logo} alt={`${chain.name} logo`}/>
+            <Img src={'https://' + chain.icon} alt={`${chain.name} logo`}/>
             {chain.name}
         </A>
     </Link>

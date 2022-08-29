@@ -1,109 +1,101 @@
 {
-    "ethereum": {
-        "name": "Ethereum",
-        "id": "ethereum",
-        "description": "The first blockchain supports smart contracts",
-        "logo": "https://raw.githubusercontent.com/l2planet/images/main/chains/ethereum.svg",
-        "solutions": {
-            "starknet": {
-                "name": "StarkNet",
-                "description": "Lorem ipsum dolor sit amet.",
-                "logo": "https://starkgate.starknet.io/static/media/starknet.6370094d.svg",
-                "website": "https://starknet.io",
-                "twitter": "StarkWareLtd",
-                "gecko": "starknet",
-                "investorLogos": [
-                    "https://images.squarespace-cdn.com/content/v1/622a2a696f7bb26ae66de111/3d20484e-dea4-44b0-8d01-14a2333e4fcc/Screen+Shot+2022-03-10+at+7.28.57+PM.png?format=1500w"
-                ]
 
-            },
-            "arbitrum": {
-                "name": "Arbitrum",
-                "description": "Lorem ipsum dolor sit amet.",
-                "logo": "https://arbitrum.io/wp-content/uploads/2021/08/Arbitrum_Symbol-Full-color-White-background-768x840.png",
-                "website": "https://arbitrum.io",
-                "twitter": "arbitrum",
-                "gecko": "arbitrum",
-                "investorLogos": [
-                    "https://images.squarespace-cdn.com/content/v1/622a2a696f7bb26ae66de111/3d20484e-dea4-44b0-8d01-14a2333e4fcc/Screen+Shot+2022-03-10+at+7.28.57+PM.png?format=1500w"
-                ]
 
-            },
-            "optimism": {
-                "name": "Optimism",
-                "description": "Lorem ipsum dolor sit amet.",
-                "logo": "https://raw.githubusercontent.com/ethereum-optimism/brand-kit/ad481978ceac19f5c1db91ca4586bf2ab238f46b/assets/svg/Profile-Logo.svg",
-                "website": "https://optimism.io",
-                "twitter": "optimism",
-                "gecko": "optimism",
-                "investorLogos": [
-                    "https://images.squarespace-cdn.com/content/v1/622a2a696f7bb26ae66de111/3d20484e-dea4-44b0-8d01-14a2333e4fcc/Screen+Shot+2022-03-10+at+7.28.57+PM.png?format=1500w"
-                ]
-
-            }
+    "chains": {
+        "ethereum": {
+            "icon": "raw.githubusercontent.com/l2planet/images/main/chains/ethereum.svg",
+            "name": "Ethereum",
+            "text": "The first blockchain supports smart contracts",
+            "solutions": [
+                "starknet"
+            ]
+        },
+        "bitcoin": {
+            "icon": "raw.githubusercontent.com/l2planet/images/main/chains/bitcoin.svg",
+            "name": "Bitcoin",
+            "text": "The first blockchain supports smart contracts"
+        },
+        "cardano": {
+            "icon": "raw.githubusercontent.com/l2planet/images/main/chains/cardano.svg",
+            "name": "Cardano",
+            "text": "The first blockchain supports smart contracts"
+        },
+        "tezos": {
+            "icon": "raw.githubusercontent.com/l2planet/images/main/chains/tezos.svg",
+            "name": "Tezos",
+            "text": "The first blockchain supports smart contracts"
+        },
+        "mina": {
+            "icon": "raw.githubusercontent.com/l2planet/images/main/chains/mina.svg",
+            "name": "Mina",
+            "text": "The first blockchain supports smart contracts"
+        },
+        "fantom": {
+            "icon": "raw.githubusercontent.com/l2planet/images/main/chains/fantom.svg",
+            "name": "Fantom",
+            "text": "The first blockchain supports smart contracts"
+        },
+        "moonbeam": {
+            "icon": "raw.githubusercontent.com/l2planet/images/main/chains/moonbeam.svg",
+            "name": "MoonBeam",
+            "text": "The first blockchain supports smart contracts"
+        },
+        "syscoin": {
+            "icon": "raw.githubusercontent.com/l2planet/images/main/chains/syscoin.svg",
+            "name": "SysCoin",
+            "text": "The first blockchain supports smart contracts"
         }
     },
-    "bitcoin": {
-        "name": "Bitcoin",
-        "id": "bitcoin",
-        "description": "The first blockchain supports smart contracts",
-        "logo": "https://raw.githubusercontent.com/l2planet/images/main/chains/bitcoin.svg",
-        "solutions": {
 
+
+
+
+
+    "solutions": {
+        "starknet": {
+            "icon": "starkgate.starknet.io/static/media/starknet.6370094d.svg",
+            "name": "StarkNet",
+            "text": "A layer 2 solution that uses STARKs.",
+            "tvl": 15423057,
+            "projects": [
+                "argent_x"
+            ],
+            "website": "starknet.io",
+            "twitter": "StarkWareLtd",
+            "github": "starkware-libs",
+            "video": "DrBJ9LWvsOQ",
+            "investors": [
+                "Alameda",
+                "3 Arrow",
+                "Pantera"
+            ]
         }
     },
-    "cardano": {
-        "name": "Cardano",
-        "id": "cardano",
-        "description": "The first blockchain supports smart contracts",
-        "logo": "https://raw.githubusercontent.com/l2planet/images/main/chains/cardano.svg",
-        "solutions": {
 
-        }
-    },
-    "tezos": {
-        "name": "Tezos",
-        "id": "tezos",
-        "description": "The first blockchain supports smart contracts",
-        "logo": "https://raw.githubusercontent.com/l2planet/images/main/chains/tezos.svg",
-        "solutions": {
 
-        }
-    },
-    "mina": {
-        "name": "Mina",
-        "id": "mina",
-        "description": "The first blockchain supports smart contracts",
-        "logo": "https://raw.githubusercontent.com/l2planet/images/main/chains/mina.svg",
-        "solutions": {
 
-        }
-    },
-    "fantom": {
-        "name": "Fantom",
-        "id": "fantom",
-        "description": "The first blockchain supports smart contracts",
-        "logo": "https://raw.githubusercontent.com/l2planet/images/main/chains/fantom.svg",
-        "solutions": {
 
-        }
-    },
-    "moonbeam": {
-        "name": "MoonBeam",
-        "id": "moonbeam",
-        "description": "The first blockchain supports smart contracts",
-        "logo": "https://raw.githubusercontent.com/l2planet/images/main/chains/moonbeam.svg",
-        "solutions": {
-
-        }
-    },
-    "syscoin": {
-        "name": "SysCoin",
-        "id": "syscoin",
-        "description": "The first blockchain supports smart contracts",
-        "logo": "https://raw.githubusercontent.com/l2planet/images/main/chains/syscoin.svg",
-        "solutions": {
-
+    "projects": {
+        "argent_x": {
+            "icon": "images.prismic.io/argentwebsite/313db37e-055d-42ee-9476-a92bda64e61d_logo.svg",
+            "name": "Argent X",
+            "text": "A great wallet open source for StarkNet.",
+            "website": "argent.xyz",
+            "twitter": "ArgentHQ",
+            "github": "argentlabs",
+            "video": "3Ytr9yc5EE0",
+            "investors": [
+                "Paradigm",
+                "StarkWare Industries",
+                "Fabric Ventures"
+            ]
         }
     }
+
+
+
+
+
+
+
 }

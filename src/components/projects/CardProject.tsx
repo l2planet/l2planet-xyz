@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { wrapn } from "wrapn";
-import { L2SolutionFromAPI } from "../../types/external";
+import { L2SolutionFromAPI, ProjectFromAPI } from "../../types/external";
+import { Project } from "../../types/internal";
 
-export const CardSolution = ({ solution, chainId }: { solution: L2SolutionFromAPI, chainId: string }) => (
-    <Link href={`/chain/${chainId}/${solution.id}`} passHref>
+export const CardProject = ({ project, chainId, solutionId }: { project: Project, chainId: string, solutionId: string }) => (
+    <Link href={`/chain/${chainId}/${solutionId}/${project.id}`} passHref>
         <A>
             <DivInfo>
-                <Img src={solution.logo}/>
-                <Name>{solution.name}</Name>
+                <Img src={project.logo}/>
+                <Name>{project.name}</Name>
             </DivInfo>
         </A>
     </Link>
