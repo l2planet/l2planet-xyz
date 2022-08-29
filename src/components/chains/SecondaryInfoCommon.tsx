@@ -1,5 +1,4 @@
 import { wrapn } from "wrapn";
-import { L2SolutionFromAPI, ProjectFromAPI } from "../../types/external";
 import { L2Solution, Project } from "../../types/internal";
 import { LinksCommon } from "./LinksCommon";
 

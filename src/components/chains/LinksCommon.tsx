@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { wrapn } from "wrapn";
-import { L2SolutionFromAPI, ProjectFromAPI } from "../../types/external";
 import { L2Solution, Project } from "../../types/internal";
 
 export const LinksCommon = <T extends L2Solution | Project>({ data: {website, twitter, gecko, github} }: { data: T }) => (
