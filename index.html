@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <style>
+            :root {
+                --url: url(./image_mobile.png);
+                --height: 150vw;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
+            #image {
+                background-image: var(--url);
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                min-height: var(--height);
+            }
+            @media (min-width: 1240px) {
+                :root {
+                    --url: url(./image_desktop.png);
+                    --height: 225vh;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="image"/>
+    </body>
+
+</html>
